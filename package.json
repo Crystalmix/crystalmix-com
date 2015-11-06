@@ -1,0 +1,21 @@
+{
+  "name": "crystalnix",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Crystalnix/crystalnix-com.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Crystalnix/crystalnix-com/issues"
+  },
+  "homepage": "https://github.com/Crystalnix/crystalnix-com#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-sass": "^2.1.0"
+  }
+}
