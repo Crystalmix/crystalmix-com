@@ -1,28 +1,58 @@
+$header_background: lightgray
+
+$header_mobile_font_size: 14px
+$header_desktop_font_size: 16px
+
+$screen-sm-min: 768px
+
 .header
-    background: white
-    padding-top: 12px
-    padding-bottom: 12px
+    font-size: $header_mobile_font_size
+    @media (min-width: $screen-sm-min)
+        font-size: $header_desktop_font_size
+    background: $header_background
     margin-bottom: 0
-    font-size: 14px
     border-radius: 0
+    border: 0
+    box-shadow: none
     width: 100%
-    .header__meny-button
-        margin: 0
-        padding-right: 0
-    a
-        padding-top: 30px !important
-        padding-right: 0px !important
-        padding-left: 0px !important
-        color: #11364D !important
-        background: white !important
-    a:hover
-        color: #FD5412 !important
-        background: white !important
-    .header__logo_text
-        letter-spacing: 1.5px
-        padding-left: 13px
+    min-height: 0
+    .navbar-header
+        padding-top: 12px
+        padding-bottom: 13px
+        @media (min-width: $screen-sm-min)
+            padding-top: 18px
+            padding-bottom: 18px
     .navbar__list
         letter-spacing: 1px
+        margin-top: 0
+        margin-bottom: 0
+        li
+            padding-top: 21px
+            padding-bottom: 21px
+            @media (min-width: $screen-sm-min)
+                padding-top: 34px
+                padding-bottom: 35px
+    a
+        padding: 0 0 !important
+        color: #11364D !important
+        background: $header_background !important
+    a:hover
+        text-decoration: none
+        background: $header_background !important
+        color: #FD5412 !important
+    a:focus
+        text-decoration: none
+        background: $header_background !important
+        color: #FD5412 !important
+    div
+        min-height: 0
+    .header__menu-button
+        margin: 0
+        padding-right: 0
+    .header__logo_text
+        vertical-align: middle
+        letter-spacing: 1.5px
+        padding-left: 13px
 
 
 
