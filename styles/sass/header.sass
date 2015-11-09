@@ -1,4 +1,5 @@
-$header_background: lightgray
+$header_background: white
+$dropdown_menu_background: #F4F5F5
 
 $header_mobile_font_size: 14px
 $header_desktop_font_size: 16px
@@ -26,12 +27,38 @@ $screen-sm-min: 768px
         letter-spacing: 1px
         margin-top: 0
         margin-bottom: 0
-        li
+        .header_dropdown-list
+            border: 0
+            border-radius: 0
+            box-shadow: none
+            padding-bottom: 0
+            padding-left: 24px
+            margin-bottom: -21px
             padding-top: 21px
-            padding-bottom: 21px
+            font-family: Monsterrat-Light
             @media (min-width: $screen-sm-min)
-                padding-top: 34px
-                padding-bottom: 35px
+                padding-top: 0
+                margin-bottom: 0
+                padding-left: 0
+                width: 100%
+                text-align: right
+                position: fixed
+                top: 89px
+                background: $dropdown_menu_background
+                li
+                    display: inline-block
+                    a
+                        background: $dropdown_menu_background !important
+        li
+            padding-top: 21px !important
+            padding-bottom: 21px !important
+            @media (min-width: $screen-sm-min)
+                padding-top: 34px !important
+                padding-bottom: 35px !important
+    .header_top_shadow
+        box-shadow: 0 -2px $dropdown_menu_background
+        @media (min-width: $screen-sm-min)
+            box-shadow: none
     a
         padding: 0 0 !important
         color: #11364D !important
