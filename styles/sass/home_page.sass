@@ -28,6 +28,7 @@ $company_background_mobile: url(../../img/home_company_mobile.png)
         line-height: 22px
         letter-spacing: 0.5px
         font-family: Monsterrat-Light
+
     .with-value
         background-image: $value_background_mobile
         background-position: center center
@@ -101,6 +102,7 @@ $company_background_mobile: url(../../img/home_company_mobile.png)
                 .with-value__down-content__img
                     padding-top: 24px
                     padding-bottom: 39px
+
     .why-crystalnix
         background: #FD5412
         color: white
@@ -127,6 +129,7 @@ $company_background_mobile: url(../../img/home_company_mobile.png)
             @media (min-width: $screen-sm-min)
                 font-size: 24px
                 letter-spacing: 1px
+
     .company
         .company__image
             background-image: $company_background_mobile
@@ -148,7 +151,56 @@ $company_background_mobile: url(../../img/home_company_mobile.png)
             .block-text
                 color: #11364D
             .container
-                height: 100%
                 padding-bottom: 50px
                 @media (min-width: $screen-sm-min)
                     padding-bottom: 90px
+
+    .our-approach
+        background: #F4F5F5
+        .container
+            height: 100%
+        .block-header
+            display: block
+            @media (min-width: $screen-sm-min)
+                padding-bottom: 50px
+        .block-text
+            display: block
+            padding-bottom: 50px
+            @media (min-width: $screen-sm-min)
+                padding-bottom: 85px
+        .our-approach__content
+            text-align: left
+            padding-bottom: 50px
+            @media (min-width: $screen-sm-min)
+                text-align: center
+                padding-bottom: 160px
+            .our-approach__block
+                position: relative
+                padding: 40px 0
+                @media (min-width: $screen-sm-min)
+                    padding: 0
+                .our-approach__block__arrow
+                    position: absolute
+                    left: 28px
+                    bottom: 0
+                    transform: translateY(50%) rotate(90deg)
+                    @media (min-width: $screen-sm-min)
+                        top: 50%
+                        left: 100%
+                        transform: translate(-50%, -50%)
+                .our-approach__block__text
+                    font-size: 20px
+                    line-height: 28px
+                    letter-spacing: 0.71px
+                    position: absolute
+                    padding-left: 100px
+                    bottom: 50%
+                    transform: translateY(50%)
+                    @media (min-width: $screen-sm-min)
+                        font-size: 24px
+                        line-height: 24px
+                        letter-spacing: 0.86px
+                        bottom: -50px
+                        padding-left: 0
+                        transform: translateX(-50%)
+                        left: 50%
