@@ -1,5 +1,15 @@
 .idea
+
 lib
+
 node_modules
+
 .DS_Store
+
 styles/css
+
+.env
+
+srv.pid
+
+local_settings.py

@@ -1,0 +1,108 @@
+footer {
+  padding-top: 50px;
+  padding-bottom: 20px;
+  background: #11364D; }
+  footer .footer__padding-bottom {
+    padding-bottom: 17px; }
+  footer .footer__padding-top {
+    padding-top: 9px; }
+  footer .footer_social-networks {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 10px;
+    padding-bottom: 27px; }
+    footer .footer_social-networks a {
+      padding-right: 10px; }
+  footer ul {
+    margin: 0; }
+  footer a {
+    color: white;
+    font-size: 14px;
+    font-family: Monsterrat-Light;
+    line-height: 26px;
+    text-decoration: none; }
+  footer a:hover {
+    color: white;
+    text-decoration: none; }
+  footer a:focus {
+    color: white;
+    text-decoration: none; }
+
+.header {
+  background: white;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  border-radius: 0;
+  width: 100%; }
+  .header .header__meny-button {
+    margin: 0;
+    padding-right: 0; }
+  .header a {
+    padding-top: 30px !important;
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+    color: #11364D !important;
+    background: white !important; }
+  .header a:hover {
+    color: #FD5412 !important;
+    background: white !important; }
+  .header .header__logo_text {
+    letter-spacing: 1.5px;
+    padding-left: 13px; }
+  .header .navbar__list {
+    letter-spacing: 1px; }
+
+.nopadding {
+  padding: 0 !important; }
+
+.main-font {
+  font-family: Monsterrat-Regular;
+  color: #11364D !important; }
+
+@media (min-width: 768px) {
+  .header {
+    padding-top: 18px;
+    padding-bottom: 18px;
+    font-size: 16px; }
+  footer {
+    padding-top: 102px;
+    padding-bottom: 70px; }
+  .navbar__list {
+    float: right; }
+    .navbar__list li {
+      padding-right: 10px;
+      padding-left: 20px; }
+      .navbar__list li a {
+        padding-top: 15px !important; }
+  .footer_social-networks {
+    padding-top: 0 !important;
+    text-align: right; }
+    .footer_social-networks a {
+      padding-left: 10px;
+      padding-right: 0 !important; } }
+
+@media (min-width: 992px) {
+  .navbar__list {
+    float: right; }
+    .navbar__list li {
+      padding-right: 20px;
+      padding-left: 25px; } }
+
+@media (min-width: 1200px) {
+  .navbar__list {
+    float: right; }
+    .navbar__list li {
+      padding-right: 35px;
+      padding-left: 40px; }
+  .container {
+    width: 1440px; } }
+
+@font-face {
+  font-family: "Monsterrat-Regular";
+  src: url(../fonts/Montserrat-Regular.otf); }
+
+@font-face {
+  font-family: "Monsterrat-Light";
+  src: url(../fonts/Montserrat-Light.otf); }
