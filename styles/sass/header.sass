@@ -5,11 +5,15 @@ $header_mobile_font_size: 14px
 $header_desktop_font_size: 16px
 
 $screen-sm-min: 768px
+$screen-md-min: 992px
+$screen-lg-min: 1200px
+
 
 .header
     font-size: $header_mobile_font_size
     @media (min-width: $screen-sm-min)
         font-size: $header_desktop_font_size
+        line-height: 19px
     background: $header_background
     margin-bottom: 0
     border-radius: 0
@@ -55,6 +59,21 @@ $screen-sm-min: 768px
             @media (min-width: $screen-sm-min)
                 padding-top: 34px !important
                 padding-bottom: 35px !important
+        @media (min-width: $screen-sm-min)
+            float: right
+            li
+                padding-right: 10px
+                padding-left: 20px
+        @media (min-width: $screen-md-min)
+            float: right
+            li
+                padding-right: 20px
+                padding-left: 25px
+        @media (min-width: $screen-lg-min)
+            float: right
+            li
+                padding-right: 35px
+                padding-left: 40px
     .header_top_shadow
         box-shadow: 0 -2px $dropdown_menu_background
         @media (min-width: $screen-sm-min)

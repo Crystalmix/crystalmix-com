@@ -1,7 +1,12 @@
+$screen-sm-min: 768px
+
 footer
     padding-top: 50px
     padding-bottom: 20px
     background: #11364D
+    @media (min-width: $screen-sm-min)
+        padding-top: 102px
+        padding-bottom: 70px
     .footer__padding-bottom
         padding-bottom: 17px
     .footer__padding-top
@@ -13,6 +18,12 @@ footer
         padding-bottom: 27px
         a
             padding-right: 10px
+        @media (min-width: $screen-sm-min)
+            padding-top: 0 !important
+            text-align: right
+            a
+                padding-left: 10px
+                padding-right: 0 !important
     ul
         margin: 0
     a

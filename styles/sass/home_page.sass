@@ -157,15 +157,12 @@ $company_background_mobile: url(../../img/home_company_mobile.png)
 
     .our-approach
         background: #F4F5F5
-        .container
-            height: 100%
         .block-header
             display: block
             @media (min-width: $screen-sm-min)
                 padding-bottom: 50px
         .block-text
             display: block
-            padding-bottom: 50px
             @media (min-width: $screen-sm-min)
                 padding-bottom: 85px
         .our-approach__content
@@ -189,6 +186,7 @@ $company_background_mobile: url(../../img/home_company_mobile.png)
                         left: 100%
                         transform: translate(-50%, -50%)
                 .our-approach__block__text
+                    font-family: Monsterrat-Light
                     font-size: 20px
                     line-height: 28px
                     letter-spacing: 0.71px
@@ -204,3 +202,17 @@ $company_background_mobile: url(../../img/home_company_mobile.png)
                         padding-left: 0
                         transform: translateX(-50%)
                         left: 50%
+
+    .our-partners
+        background: white
+        .block-header
+            display: block
+        .our-partners__block
+            height: 100%
+        .our-partners__block__text
+            display: block
+            padding: 15px 30px 60px 30px
+
+        .container
+            box-shadow: 0 -2px #F4F5F5
+            padding-bottom: 30px
