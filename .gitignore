@@ -10,6 +10,13 @@ styles/css
 
 .env
 
+*.pyc
+*~
+
+output/
+cache/
+
 srv.pid
+pelican.pid
 
 local_settings.py

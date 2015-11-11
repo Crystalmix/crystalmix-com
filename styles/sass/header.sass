@@ -1,28 +1,104 @@
+$header_background: white
+$dropdown_menu_background: #F4F5F5
+
+$header_mobile_font_size: 14px
+$header_desktop_font_size: 16px
+
+$screen-sm-min: 768px
+$screen-md-min: 992px
+$screen-lg-min: 1200px
+
+
 .header
-    background: white
-    padding-top: 12px
-    padding-bottom: 12px
+    font-size: $header_mobile_font_size
+    @media (min-width: $screen-sm-min)
+        font-size: $header_desktop_font_size
+        line-height: 19px
+    background: $header_background
     margin-bottom: 0
-    font-size: 14px
     border-radius: 0
+    border: 0
+    box-shadow: none
     width: 100%
-    .header__meny-button
-        margin: 0
-        padding-right: 0
-    a
-        padding-top: 30px !important
-        padding-right: 0px !important
-        padding-left: 0px !important
-        color: #11364D !important
-        background: white !important
-    a:hover
-        color: #FD5412 !important
-        background: white !important
-    .header__logo_text
-        letter-spacing: 1.5px
-        padding-left: 13px
+    min-height: 0
+    .navbar-header
+        padding-top: 12px
+        padding-bottom: 13px
+        @media (min-width: $screen-sm-min)
+            padding-top: 18px
+            padding-bottom: 18px
     .navbar__list
         letter-spacing: 1px
+        margin-top: 0
+        margin-bottom: 0
+        .header_dropdown-list
+            border: 0
+            border-radius: 0
+            box-shadow: none
+            padding-bottom: 0
+            padding-left: 24px
+            margin-bottom: -21px
+            padding-top: 21px
+            font-family: Monsterrat-Light
+            @media (min-width: $screen-sm-min)
+                padding-top: 0
+                margin-bottom: 0
+                padding-left: 0
+                width: 100%
+                text-align: right
+                position: fixed
+                top: 89px
+                background: $dropdown_menu_background
+                li
+                    display: inline-block
+                    a
+                        background: $dropdown_menu_background !important
+        li
+            padding-top: 21px !important
+            padding-bottom: 21px !important
+            @media (min-width: $screen-sm-min)
+                padding-top: 34px !important
+                padding-bottom: 35px !important
+        @media (min-width: $screen-sm-min)
+            float: right
+            li
+                padding-right: 10px
+                padding-left: 20px
+        @media (min-width: $screen-md-min)
+            float: right
+            li
+                padding-right: 20px
+                padding-left: 25px
+        @media (min-width: $screen-lg-min)
+            float: right
+            li
+                padding-right: 35px
+                padding-left: 40px
+    .header_top_shadow
+        box-shadow: 0 -2px $dropdown_menu_background
+        @media (min-width: $screen-sm-min)
+            box-shadow: none
+    a
+        padding: 0 0 !important
+        color: #11364D !important
+        background: $header_background !important
+    a:hover
+        text-decoration: none
+        background: $header_background !important
+        color: #FD5412 !important
+    a:focus
+        text-decoration: none
+        background: $header_background !important
+        color: #FD5412 !important
+    div
+        min-height: 0
+    .header__menu-button
+        margin: 0
+        padding-right: 0
+    .header__logo_text
+        vertical-align: middle
+        letter-spacing: 1.5px
+        padding-left: 13px
 
 
 
