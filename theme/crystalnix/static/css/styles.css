@@ -1,14 +1,14 @@
 @font-face {
   font-family: "Monsterrat-Regular";
-  src: url(../fonts/Montserrat-Regular.otf); }
+  src: url(../../fonts/Montserrat-Regular.otf); }
 
 @font-face {
   font-family: "Monsterrat-Light";
-  src: url(../fonts/Montserrat-Light.otf); }
+  src: url(../../fonts/Montserrat-Light.otf); }
 
 @font-face {
   font-family: "Montserrat-Hairline";
-  src: url(../fonts/Montserrat-Hairline.otf); }
+  src: url(../../fonts/Montserrat-Hairline.otf); }
 
 footer {
   padding-top: 50px;
@@ -177,7 +177,7 @@ footer {
     letter-spacing: 0.5px;
     font-family: Monsterrat-Light; }
   .home-page .with-value {
-    background-image: url(../img/home_value_mobile.png);
+    background-image: url(../../img/home_value_mobile.png);
     background-position: center center;
     background-repeat: no-repeat;
     -moz-background-size: cover;
@@ -188,7 +188,7 @@ footer {
     @media (min-width: 768px) {
       .home-page .with-value {
         height: 785px;
-        background-image: url(../img/home_value.png); } }
+        background-image: url(../../img/home_value.png); } }
     .home-page .with-value .container {
       height: 100%;
       position: relative;
@@ -284,7 +284,7 @@ footer {
           font-size: 24px;
           letter-spacing: 1px; } }
   .home-page .company .company__image {
-    background-image: url(../img/home_company_mobile.png);
+    background-image: url(../../img/home_company_mobile.png);
     background-position: center center;
     background-repeat: no-repeat;
     -moz-background-size: cover;
@@ -295,7 +295,7 @@ footer {
     @media (min-width: 768px) {
       .home-page .company .company__image {
         height: 600px;
-        background-image: url(../img/home_company.png); } }
+        background-image: url(../../img/home_company.png); } }
   .home-page .company .company__content {
     background: white;
     color: #FD5412; }

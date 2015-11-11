@@ -47,6 +47,6 @@ ARTICLE_SAVE_AS = 'blog/{slug}.html'
 PAGE_URL = '{slug}.html'
 PAGE_SAVE_AS = '{slug}.html'
 
-CDN_URL = '//localhost:8000'
+CDN_URL = ''
 
 LOAD_CONTENT_CACHE = False
