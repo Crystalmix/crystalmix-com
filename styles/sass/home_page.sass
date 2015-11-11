@@ -174,13 +174,17 @@ $company_background_mobile: url(../../img/home_company_mobile.png)
             .our-approach__block
                 position: relative
                 padding: 40px 0
+                .our-approach__block__img
+                    width: 80px
+                    img
+                        margin: auto
                 @media (min-width: $screen-sm-min)
                     padding: 0
                 .our-approach__block__arrow
                     position: absolute
-                    left: 28px
+                    left: 40px
                     bottom: 0
-                    transform: translateY(50%) rotate(90deg)
+                    transform: translate(-50%, 50%) rotate(90deg)
                     @media (min-width: $screen-sm-min)
                         top: 50%
                         left: 100%
@@ -191,7 +195,7 @@ $company_background_mobile: url(../../img/home_company_mobile.png)
                     line-height: 28px
                     letter-spacing: 0.71px
                     position: absolute
-                    padding-left: 100px
+                    padding-left: 85px
                     bottom: 50%
                     transform: translateY(50%)
                     @media (min-width: $screen-sm-min)
