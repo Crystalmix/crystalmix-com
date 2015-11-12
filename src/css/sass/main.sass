@@ -1,3 +1,5 @@
+$screen-sm-min: 768px
+
 .nopadding
     padding: 0 !important
 
@@ -7,3 +9,58 @@
 
 .text-underline
     text-decoration: underline
+
+.page-logo
+    background-position: center center
+    background-repeat: no-repeat
+    -moz-background-size: cover
+    -webkit-background-size: cover
+    -o-background-size: cover
+    background-size: cover
+    height: 600px
+    @media (min-width: $screen-sm-min)
+        height: 785px
+    .container
+            height: 100%
+            position: relative
+            text-align: center
+            .page-logo__content
+                position: absolute
+                width: 100%
+                top: 50%
+                transform: translateY(-50%)
+                color: white
+                .page-logo__content__header
+                    font-family: Monsterrat-Regular
+                    display: block
+                    font-size: 40px
+                    line-height: 48px
+                    letter-spacing: 1px
+                    padding-bottom: 30px
+                    @media (min-width: $screen-sm-min)
+                        font-size: 50px
+                        line-height: 60px
+                        letter-spacing: 4px
+                        padding-bottom: 25px
+                .page-logo__content__text
+                    display: block
+                    padding-left: 15px
+                    padding-right: 15px
+                    max-width: 650px
+                    margin: auto
+                    font-size: 16px
+                    line-height: 22px
+                    letter-spacing: 0.56px
+                    font-family: Monsterrat-Light
+                    @media (min-width: $screen-sm-min)
+                        font-size: 20px
+                        line-height: 30px
+                        letter-spacing: 0.7px
+            .page-logo__down-content
+                width: 100%
+                position: absolute
+                bottom: 0
+                .page-logo__down-content__img
+                    padding-bottom: 45px
+                    @media (min-width: $screen-sm-min)
+                        padding-bottom: 75px

@@ -1,0 +1,74 @@
+$screen-sm-min: 768px
+
+$services_background: url(../img/our_services/services_background.png)
+$services_background_mobile: url(../img/our_services/services_background_mobile.png)
+
+
+.services
+    padding-top: 65px
+    @media (min-width: $screen-sm-min)
+        padding-top: 89px
+    .block-header
+        font-family: Monsterrat-Light
+        font-size: 36px
+        line-height: 43px
+        letter-spacing: 3.6px
+        padding-top: 50px
+        padding-bottom: 50px
+        @media (min-width: $screen-sm-min)
+            padding-top: 90px
+            padding-bottom: 60px
+            font-size: 40px
+            line-height: 48px
+            letter-spacing: 4px
+    .block-text
+        font-size: 14px
+        line-height: 22px
+        letter-spacing: 0.5px
+        font-family: Monsterrat-Light
+
+    .page-logo
+        background-color: #FD5412
+        background-image: $services_background_mobile
+        @media (min-width: $screen-sm-min)
+            background-image: $services_background
+
+    .product
+        background: #F4F5F5
+        .block-text
+            padding-left: 15px
+            padding-right: 15px
+        span
+            display: block
+        .block-header_second
+            font-family: Monsterrat-Light
+            font-size: 20px
+            line-height: 26px
+            letter-spacing: 0.83px
+            padding-bottom: 45px
+            @media (min-width: $screen-sm-min)
+                font-size: 24px
+                line-height: 29px
+                letter-spacing: 1.8px
+                padding-bottom: 55px
+        .product__content
+            margin: 0
+            padding-top: 43px
+            padding-bottom: 10px
+            @media (min-width: $screen-sm-min)
+                padding-top: 73px
+                padding-bottom: 40px
+            .product__content__wrapper
+                padding: 0
+            .product__content__block
+                padding-bottom: 54px
+                .block-text
+                    padding: 0
+                .product__content__block__title
+                    padding-bottom: 26px
+                    padding-top: 26px
+                    font-family: Montserrat-Hairline
+                    color: #FD5412
+                    font-size: 24px
+                    line-height: 26px
+                    letter-spacing: 0
