@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% if article.title == 'index' %}
+  {% block head %}
+    {{ super() }}
+    {% for keyword in article.keywords %}
+      <meta name="keywords" contents="{{keyword}}" />
+    {% endfor %}
+
+    {% for description in article.description %}
+      <meta name="description" contents="{{description}}" />
+    {% endfor %}
+
+    {% for tag in article.tags %}
+      <meta name="tags" contents="{{tag}}" />
+    {% endfor %}
+  {% endblock %}
+{% endif %}
+
+{% block content %}
+  <div class="content home-page">
+      {% if article.title == 'index' %}
+        {% include 'blog_index.html' %}
+      {% else %}
+      <section id="content" class="body">
+        <div>
+          <h2 class="entry-title">
+            <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark"
+               title="Permalink to {{ article.title|striptags }}">{{ article.title }}
+            </a>
+          </h2>
+        </div>
+        <div class="entry-content">
+          {{ article.content }}
+        </div><!-- /.entry-content -->
+        <div id="disqus_thread"></div>
+      </section>
+
+      {% if article.prev_article and article.prev_article.title != 'index'%}
+          <p class="prevpost"><i class="fa fa-arrow-left"></i> Older<br />
+          <a href="{{ SITEURL }}/{{ article.prev_article.url}}">{{ article.prev_article.title }}</a></p>
+      {% endif %}
+      {% if article.next_article and article.next_article.title != 'index'%}
+          <p class="nextpost">Newer <i class="fa fa-arrow-right"></i><br />
+          <a href="{{ SITEURL }}/{{ article.next_article.url}}">{{ article.next_article.title }}</a></p>
+      {% endif %}
+
+      {% endif %}
+    </div>
+{% endblock %}

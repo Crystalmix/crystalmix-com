@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
 
-AUTHOR = u'Roman Usynin'
 SITENAME = u'Crystalnix'
+SITEURL = u''
 
 PATH = 'content'
 
@@ -44,9 +44,15 @@ SUMMARY_MAX_LENGTH = 50
 ARTICLE_URL = 'blog/{slug}.html'
 ARTICLE_SAVE_AS = 'blog/{slug}.html'
 
+PROJECT_URL = 'projects/{slug}.html'
+PROJECT_SAVE_AS = 'projects/{slug}.html'
+
 PAGE_URL = '{slug}.html'
 PAGE_SAVE_AS = '{slug}.html'
 
 CDN_URL = ''
 
 LOAD_CONTENT_CACHE = False
+
+PLUGIN_PATHS = ['./pelican-plugins']
+PLUGINS = ['neighbors', 'articles_counter']
