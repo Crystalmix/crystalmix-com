@@ -1,0 +1,22 @@
+<section id="content">
+        {% block content_title %}
+        {% endblock %}
+
+        {% for i in pages if i.title != 'index' %}
+        <article class="container">
+          <div> <h2 class="entry-title"><a href="{{ SITEURL }}/{{ i.url }}" rel="bookmark" title="Permalink to {{ i.title|striptags }}">{{ i.title }}</a></h2> </div>
+          <div class="author">By {{i.author}}, {{i.date.strftime('%d.%m.%Y')}}</div>
+          <div class="entry-content">
+            {{ i.summary }} <a href="{{ SITEURL }}/{{ i.url }}" class="continue-reading">READ MORE</a>
+          </div>
+
+          <div class="tags">
+              # {% for tag in i.tags %} {{ tag }} {% endfor %}
+          </div>
+          <!-- /.entry-content -->
+        </article>
+        {% endfor %}
+
+        <div style="clear: both;"></div>
+            <br>
+      </section><!-- /#content -->

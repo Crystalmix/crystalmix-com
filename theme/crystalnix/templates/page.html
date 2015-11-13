@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% if page.title == 'index' %}
+  {% block head %}
+    {{ super() }}
+    {% for keyword in page.keywords %}
+      <meta name="keywords" contents="{{keyword}}" />
+    {% endfor %}
+
+    {% for description in page.description %}
+      <meta name="description" contents="{{description}}" />
+    {% endfor %}
+
+    {% for tag in page.tags %}
+      <meta name="tags" contents="{{tag}}" />
+    {% endfor %}
+  {% endblock %}
+{% endif %}
+
+{% block content %}
+  <div class="content home-page">
+      {% if page.title == 'index' %}
+        {% include 'projects_index.html' %}
+      {% else %}
+      <section id="content" class="body">
+        <div>
+          <h2 class="entry-title">
+            <a href="{{ SITEURL }}/{{ page.url }}" rel="bookmark"
+               title="Permalink to {{ page.title|striptags }}">{{ page.title }}
+
+            </a>
+          </h2>
+        </div>
+        <div class="entry-content">
+          {{ page.content }}
+        </div><!-- /.entry-content -->
+        <div id="disqus_thread"></div>
+      </section>
+
+      {% endif %}
+    </div>
+{% endblock %}

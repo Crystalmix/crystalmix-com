@@ -2,7 +2,20 @@
         {% block content_title %}
         {% endblock %}
         
+        <!--<div ng-init="articles = [-->
+            <!--{% for i in articles if i.title != 'index' %}-->
+                <!--{-->
+                    <!--title: '{{ i.title }}',-->
+                    <!--url: '{{ i.url }}',-->
+                    <!--author: '{{ i.author }}',-->
+                    <!--date: '{{ i.date.strftime('%d.%m.%Y') }}',-->
+                    <!--summary: '{{ i.summary }}',-->
+                    <!--tags: [-->
+                       <!--{% for tag in i.tags %} '{{ tag }}', {% endfor %}-->
+                    <!--]-->
 
+            <!--{% endfor %}-->
+            <!--]"></div>-->
         {% for i in articles if i.title != 'index' %}
         <article class="container">
           <div> <h2 class="entry-title"><a href="{{ SITEURL }}/{{ i.url }}" rel="bookmark" title="Permalink to {{ i.title|striptags }}">{{ i.title }}</a></h2> </div>
@@ -19,12 +32,25 @@
         {% endfor %}
 
         <div style="clear: both;"></div>
-        {% for tag in tags|map(attribute=0)|sort(attribute='articles_counter', reverse=true) %}
-            {{tag.name}} ({{tag.articles_counter}})
-        {% endfor %}
-        ==========
-        {% for author in authors|map(attribute=0)|sort(attribute='articles_counter', reverse=true) %}
-            {{author.name}} ({{author.articles_counter}})
-        {% endfor %}
-            <br>
+        <div class="center-block">
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            {% for tag in tags|map(attribute=0)|sort(attribute='articles_counter', reverse=true) %}
+                                {{tag.name}} ({{tag.articles_counter}})
+                                <br>
+                            {% endfor %}
+                        </td>
+                        <td>
+                            {% for author in authors|map(attribute=0)|sort(attribute='articles_counter', reverse=true) %}
+                                {{author.name}} ({{author.articles_counter}})
+                                <br>
+                            {% endfor %}
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
       </section><!-- /#content -->

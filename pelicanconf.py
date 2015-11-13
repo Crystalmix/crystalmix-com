@@ -41,14 +41,37 @@ DEFAULT_DATE_FORMAT = '%a %d %B %Y'
 
 SUMMARY_MAX_LENGTH = 50
 
+BLOG_URL = "/blog/"
 ARTICLE_URL = 'blog/{slug}.html'
 ARTICLE_SAVE_AS = 'blog/{slug}.html'
 
-PROJECT_URL = 'projects/{slug}.html'
-PROJECT_SAVE_AS = 'projects/{slug}.html'
+PROJECTS_URL = "/projects/"
+PAGE_URL = 'projects/{slug}.html'
+PAGE_SAVE_AS = 'projects/{slug}.html'
 
-PAGE_URL = '{slug}.html'
-PAGE_SAVE_AS = '{slug}.html'
+TAGS_SAVE_AS = ''
+TAG_URL = ''
+TAG_SAVE_AS = ''
+
+CATEGORIES_SAVE_AS = ''
+CATEGORY_URL = ''
+CATEGORY_SAVE_AS = ''
+
+AUTHORS_SAVE_AS = ''
+AUTHOR_URL = ''
+AUTHOR_SAVE_AS = ''
+
+ARCHIVES_SAVE_AS = ''
+
+SERVICES_SAVE_AS = "services.html"
+SERVICES_URL = "/" + SERVICES_SAVE_AS
+CONTACTS_SAVE_AS = "contacts.html"
+CONTACTS_URL = "/" + CONTACTS_SAVE_AS
+
+TEMPLATE_PAGES = {"services.html": SERVICES_SAVE_AS,
+                  "contacts.html": CONTACTS_SAVE_AS
+                  }
+
 
 CDN_URL = ''
 

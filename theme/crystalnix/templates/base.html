@@ -19,7 +19,7 @@
             <div class="row">
 
                 <div class="navbar-header col-lg-3 col-md-3 col-sm-1">
-                    <a href="#">
+                    <a href="{{ SITE_URL }}/">
                         <img class="hidden-xs" src="{{ CDN_URL }}/theme/img/logo.png" alt="logo">
                         <img class="visible-xs pull-left" src="{{ CDN_URL }}/theme/img/logo_mobile.png" alt="logo">
                         <span class="header__logo_text hidden-xs hidden-sm">
@@ -35,7 +35,7 @@
                     <div class="collapse navbar-collapse" id="responsive-navbar">
                         <ul class="navbar__list nav navbar-nav">
                             <li class="dropdown">
-                                <a id="linka" href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <a id="linka" href="{{ SITE_URL }}/" class="dropdown-toggle" data-toggle="dropdown">
                                     Who we are
                                     <b class="caret visible-xs pull-right"></b>
                                     <b class="caret hidden-xs"></b>
@@ -51,7 +51,7 @@
                                 </ul>
                             </li>
                             <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <a href="{{ SERVICES_URL }}" class="dropdown-toggle" data-toggle="dropdown">
                                     Our services
                                     <b class="caret visible-xs pull-right"></b>
                                     <b class="caret hidden-xs"></b>
@@ -65,13 +65,13 @@
                                 </ul>
                             </li>
                             <li class="">
-                                <a href="#">Our work</a>
+                                <a href="{{ PROJECTS_URL }}">Our work</a>
                             </li>
                             <li class="">
-                                <a href="#">Contact us</a>
+                                <a href="{{ CONTACTS_URL }}">Contact us</a>
                             </li>
                             <li class="">
-                                <a href="#">Blog</a>
+                                <a href="{{ BLOG_URL }}">Blog</a>
                             </li>
                         </ul>
                     </div>
