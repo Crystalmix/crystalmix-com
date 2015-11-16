@@ -3,7 +3,7 @@
 from __future__ import unicode_literals
 
 SITENAME = u'Crystalnix'
-SITEURL = u''
+SITEURL = u'localhost:8000'
 
 PATH = 'content'
 
@@ -79,3 +79,5 @@ LOAD_CONTENT_CACHE = False
 
 PLUGIN_PATHS = ['./pelican-plugins']
 PLUGINS = ['neighbors', 'articles_counter']
+
+SIMPLE_FORM_TOKEN = "0c0c9b03a05373c1dd541ebfae44dcbb"
