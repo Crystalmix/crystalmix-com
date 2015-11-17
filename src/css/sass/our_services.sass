@@ -118,6 +118,16 @@ $services_background_mobile: url(../img/our_services/services_background_mobile.
             margin: 0
         .slick-slide:hover
             cursor: pointer
+        .bespoke__list
+            margin: 0
+            padding-left: 20px
+            li
+                font-size: 20px
+        .bespoke__list-text
+            font-family: Monsterrat-Light
+            font-size: 12px
+            line-height: 22px
+            letter-spacing: 0.4px
         .bespoke__mobile
             padding-bottom: 40px
             .block-header
@@ -135,13 +145,14 @@ $services_background_mobile: url(../img/our_services/services_background_mobile.
                 background: white
                 img
                     padding-top: 20px
-            .bespoke__mobile__container__content
-                width: 100%
-                height: 300px
+            .bespoke__mobile__content
+                color: white
                 margin-top: -1px
                 background: #FD5412
                 border-radius: 5px
-
+                padding: 30px 15px 30px 15px
+                @media (min-width: $screen-sm-min)
+                    padding: 50px 100px 50px 100px
             .slide:focus
                 outline: none
             @media (min-width: $screen-md-min)
@@ -158,7 +169,7 @@ $services_background_mobile: url(../img/our_services/services_background_mobile.
                 font-size: 14px
                 line-height: 26px
                 letter-spacing: 0.78px
-            .slide-name
+            .mobile__slide-name
                 display: block
                 text-align: center
                 padding-top: 10px
