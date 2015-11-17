@@ -114,20 +114,38 @@ $services_background_mobile: url(../img/our_services/services_background_mobile.
     .bespoke
         .block-header
             display: block
+        .block-text
+            display: block
         .slick-slider
             margin: 0
         .slick-slide:hover
             cursor: pointer
+        #internet, #business
+            .row
+                margin: 0
+        @media (min-width: $screen-md-min)
+            #business
+                .bespoke__list
+                    &.bespoke__list_left-padding
+                        padding-left: 40px
         .bespoke__list
             margin: 0
+            padding-right: 0
             padding-left: 20px
+            list-style-type: disc
             li
+                padding-top: 22px
                 font-size: 20px
         .bespoke__list-text
+            display: block
             font-family: Monsterrat-Light
             font-size: 12px
             line-height: 22px
             letter-spacing: 0.4px
+            .bespoke__list-pointer
+                position: absolute
+                font-size: 40px
+                line-height: 22px
         .bespoke__mobile
             padding-bottom: 40px
             .block-header
