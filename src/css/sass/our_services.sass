@@ -110,7 +110,7 @@ $services_background_mobile: url(../img/our_services/services_background_mobile.
                     font-size: 24px
                     line-height: 26px
                     letter-spacing: 0
-                    
+
     .bespoke
         .block-header
             display: block
@@ -120,7 +120,15 @@ $services_background_mobile: url(../img/our_services/services_background_mobile.
             margin: 0
         .slick-slide:hover
             cursor: pointer
-        #internet, #business
+        .slide:focus
+            outline: none
+        .cloud__header
+            color: #FD5412
+        @media (min-width: $screen-md-min)
+            .slide
+                height: 100px
+                position: relative
+        #internet, #business, #solutions, #migration
             .row
                 margin: 0
         @media (min-width: $screen-md-min)
@@ -128,7 +136,7 @@ $services_background_mobile: url(../img/our_services/services_background_mobile.
                 .bespoke__list
                     &.bespoke__list_left-padding
                         padding-left: 40px
-        #hybrid, #websites, #internet, #business, #social
+        #hybrid, #websites, #internet, #business, #social, #solutions, #continuous, #migration
             display: none
         .bespoke__list
             margin: 0
@@ -139,6 +147,7 @@ $services_background_mobile: url(../img/our_services/services_background_mobile.
                 padding-top: 22px
                 font-size: 20px
         .bespoke__list-text
+            padding-right: 15px
             display: block
             font-family: Monsterrat-Light
             font-size: 12px
@@ -148,8 +157,10 @@ $services_background_mobile: url(../img/our_services/services_background_mobile.
                 position: absolute
                 font-size: 40px
                 line-height: 22px
-        .bespoke__mobile
+        .bespoke__slider
             padding-bottom: 40px
+            @media (min-width: $screen-sm-min)
+                padding-bottom: 100px
             .block-header
                 padding-top: 0
                 font-size: 24px
@@ -161,24 +172,22 @@ $services_background_mobile: url(../img/our_services/services_background_mobile.
                     line-height: 29px
                     letter-spacing: 2.4px
                     padding-bottom: 93px
-            .bespoke__mobile__container
-                background: white
+            .bespoke__slider__container
                 img
                     padding-top: 20px
-            .bespoke__mobile__content
+                &.mobile_mode
+                    .bespoke__slider__content
+                        background: #FD5412
+                &.cloud_mode
+                    .bespoke__slider__content
+                        background: #11364D
+            .bespoke__slider__content
                 color: white
                 margin-top: -1px
-                background: #FD5412
                 border-radius: 5px
                 padding: 30px 15px 30px 15px
                 @media (min-width: $screen-sm-min)
                     padding: 50px 100px 50px 100px
-            .slide:focus
-                outline: none
-            @media (min-width: $screen-md-min)
-                .slide
-                    height: 100px
-                    position: relative
             .slide-text
                 position: absolute
                 display: block
@@ -189,7 +198,7 @@ $services_background_mobile: url(../img/our_services/services_background_mobile.
                 font-size: 14px
                 line-height: 26px
                 letter-spacing: 0.78px
-            .mobile__slide-name
+            .slide-name
                 display: block
                 text-align: center
                 padding-top: 10px
@@ -197,86 +206,135 @@ $services_background_mobile: url(../img/our_services/services_background_mobile.
                 font-size: 14px
                 line-height: 26px
                 letter-spacing: 0.78px
-            .slide-0
-                .slide-image
-                    margin: auto
-                    content: url(../img/our_services/bespoke/hybrid_mobile.png)
-                &.slick-center
-                    .slide-image
-                        margin: auto
-                        content: url(../img/our_services/bespoke/hybrid_active_mobile.png)
-            .slide-1
-                .slide-image
-                    margin: auto
-                    content: url(../img/our_services/bespoke/websites_mobile.png)
-                &.slick-center
-                    .slide-image
-                        margin: auto
-                        content: url(../img/our_services/bespoke/websites_active_mobile.png)
-            .slide-2
-                .slide-image
-                    margin: auto
-                    content: url(../img/our_services/bespoke/social_mobile.png)
-                &.slick-center
-                    .slide-image
-                        margin: auto
-                        content: url(../img/our_services/bespoke/social_active_mobile.png)
-            .slide-3
-                .slide-image
-                    margin: auto
-                    content: url(../img/our_services/bespoke/internet_mobile.png)
-                &.slick-center
-                    .slide-image
-                        margin: auto
-                        content: url(../img/our_services/bespoke/internet_active_mobile.png)
-            .slide-4
-                .slide-image
-                    margin: auto
-                    content: url(../img/our_services/bespoke/business_mobile.png)
-                &.slick-center
-                    .slide-image
-                        margin: auto
-                        content: url(../img/our_services/bespoke/business_active_mobile.png)
-            @media (min-width: $screen-sm-min)
-                padding-bottom: 100px
+            .slider-mobile
                 .slide-0
                     .slide-image
                         margin: auto
-                        content: url(../img/our_services/bespoke/hybrid.png)
+                        content: url(../img/our_services/bespoke/hybrid_mobile.png)
                     &.slick-center
                         .slide-image
                             margin: auto
-                            content: url(../img/our_services/bespoke/hybrid_active.png)
+                            content: url(../img/our_services/bespoke/hybrid_active_mobile.png)
                 .slide-1
                     .slide-image
                         margin: auto
-                        content: url(../img/our_services/bespoke/websites.png)
+                        content: url(../img/our_services/bespoke/websites_mobile.png)
                     &.slick-center
                         .slide-image
                             margin: auto
-                            content: url(../img/our_services/bespoke/websites_active.png)
+                            content: url(../img/our_services/bespoke/websites_active_mobile.png)
                 .slide-2
                     .slide-image
                         margin: auto
-                        content: url(../img/our_services/bespoke/social.png)
+                        content: url(../img/our_services/bespoke/social_mobile.png)
                     &.slick-center
                         .slide-image
                             margin: auto
-                            content: url(../img/our_services/bespoke/social_active.png)
+                            content: url(../img/our_services/bespoke/social_active_mobile.png)
                 .slide-3
                     .slide-image
                         margin: auto
-                        content: url(../img/our_services/bespoke/internet.png)
+                        content: url(../img/our_services/bespoke/internet_mobile.png)
                     &.slick-center
                         .slide-image
                             margin: auto
-                            content: url(../img/our_services/bespoke/internet_active.png)
+                            content: url(../img/our_services/bespoke/internet_active_mobile.png)
                 .slide-4
                     .slide-image
                         margin: auto
-                        content: url(../img/our_services/bespoke/business.png)
+                        content: url(../img/our_services/bespoke/business_mobile.png)
                     &.slick-center
                         .slide-image
                             margin: auto
-                            content: url(../img/our_services/bespoke/business_active.png)
-
+                            content: url(../img/our_services/bespoke/business_active_mobile.png)
+                @media (min-width: $screen-sm-min)
+                    .slide-0
+                        .slide-image
+                            margin: auto
+                            content: url(../img/our_services/bespoke/hybrid.png)
+                        &.slick-center
+                            .slide-image
+                                margin: auto
+                                content: url(../img/our_services/bespoke/hybrid_active.png)
+                    .slide-1
+                        .slide-image
+                            margin: auto
+                            content: url(../img/our_services/bespoke/websites.png)
+                        &.slick-center
+                            .slide-image
+                                margin: auto
+                                content: url(../img/our_services/bespoke/websites_active.png)
+                    .slide-2
+                        .slide-image
+                            margin: auto
+                            content: url(../img/our_services/bespoke/social.png)
+                        &.slick-center
+                            .slide-image
+                                margin: auto
+                                content: url(../img/our_services/bespoke/social_active.png)
+                    .slide-3
+                        .slide-image
+                            margin: auto
+                            content: url(../img/our_services/bespoke/internet.png)
+                        &.slick-center
+                            .slide-image
+                                margin: auto
+                                content: url(../img/our_services/bespoke/internet_active.png)
+                    .slide-4
+                        .slide-image
+                            margin: auto
+                            content: url(../img/our_services/bespoke/business.png)
+                        &.slick-center
+                            .slide-image
+                                margin: auto
+                                content: url(../img/our_services/bespoke/business_active.png)
+            .slider-cloud
+                .slide-0
+                    .slide-image
+                        margin: auto
+                        content: url(../img/our_services/bespoke/solutions_mobile.png)
+                    &.slick-center
+                        .slide-image
+                            margin: auto
+                            content: url(../img/our_services/bespoke/solutions_active_mobile.png)
+                .slide-1
+                    .slide-image
+                        margin: auto
+                        content: url(../img/our_services/bespoke/continuous_mobile.png)
+                    &.slick-center
+                        .slide-image
+                            margin: auto
+                            content: url(../img/our_services/bespoke/continuous_active_mobile.png)
+                .slide-2
+                    .slide-image
+                        margin: auto
+                        content: url(../img/our_services/bespoke/migration_mobile.png)
+                    &.slick-center
+                        .slide-image
+                            margin: auto
+                            content: url(../img/our_services/bespoke/migration_active_mobile.png)
+                @media (min-width: $screen-sm-min)
+                    .slide-0
+                        .slide-image
+                            margin: auto
+                            content: url(../img/our_services/bespoke/solutions.png)
+                        &.slick-center
+                            .slide-image
+                                margin: auto
+                                content: url(../img/our_services/bespoke/solutions_active.png)
+                    .slide-1
+                        .slide-image
+                            margin: auto
+                            content: url(../img/our_services/bespoke/continuous.png)
+                        &.slick-center
+                            .slide-image
+                                margin: auto
+                                content: url(../img/our_services/bespoke/continuous_active.png)
+                    .slide-2
+                        .slide-image
+                            margin: auto
+                            content: url(../img/our_services/bespoke/migration.png)
+                        &.slick-center
+                            .slide-image
+                                margin: auto
+                                content: url(../img/our_services/bespoke/migration_active.png)
