@@ -28,12 +28,13 @@ $screen-lg-min: 1200px
             padding-top: 18px
             padding-bottom: 18px
     .navbar__list
-        .dropdown:hover
-            .dropdown-menu
-                display: block
-            .dropdown-toggle
-                color: #FD5412 !important
-            cursor: pointer
+        @media (min-width: $screen-sm-min)
+            .dropdown:hover
+                .dropdown-menu
+                    display: block
+                .dropdown-toggle
+                    color: #FD5412 !important
+                cursor: pointer
         letter-spacing: 1px
         margin-top: 0
         margin-bottom: 0

@@ -1,0 +1,35 @@
+$screen-sm-min: 768px
+$screen-md-min: 992px
+
+$work_background: url(../img/our_work/work_background.png)
+$work_background_mobile: url(../img/our_work/work_background_mobile.png)
+
+
+.work
+    padding-top: 65px
+    @media (min-width: $screen-sm-min)
+        padding-top: 89px
+    .block-header
+        font-family: Monsterrat-Light
+        font-size: 36px
+        line-height: 43px
+        letter-spacing: 3.6px
+        padding-top: 40px
+        padding-bottom: 50px
+        @media (min-width: $screen-sm-min)
+            padding-top: 100px
+            padding-bottom: 60px
+            font-size: 40px
+            line-height: 48px
+            letter-spacing: 4px
+    .block-text
+        font-size: 14px
+        line-height: 22px
+        letter-spacing: 0.5px
+        font-family: Monsterrat-Light
+
+    .page-logo
+        background-color: #11364D
+        background-image: $work_background_mobile
+        @media (min-width: $screen-sm-min)
+            background-image: $work_background
