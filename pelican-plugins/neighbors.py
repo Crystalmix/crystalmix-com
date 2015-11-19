@@ -37,7 +37,8 @@ def set_neighbors(articles, next_name, prev_name):
             exec(
             "translation.{} = get_translation(prv, translation.lang)".format(
                 prev_name))
-      
+
+
 def neighbors(generator):
     set_neighbors(generator.articles, 'next_article', 'prev_article')
     
@@ -54,5 +55,16 @@ def neighbors(generator):
             prev_name = 'prev_article_in_subcategory{}'.format(index)
             set_neighbors(articles, next_name, prev_name)
 
+
+def set_neighbors_pages(pages, next_name, prev_name):
+    for nxt, cur, prv in iter3(pages):
+        exec("cur.{} = nxt".format(next_name))
+        exec("cur.{} = prv".format(prev_name))
+
+
+def neighbors_pages(generator):
+    set_neighbors_pages(generator.pages, 'next_page', 'prev_page')
+
 def register():
     signals.article_generator_finalized.connect(neighbors)
+    signals.page_generator_finalized.connect(neighbors_pages)

@@ -25,16 +25,22 @@
       <section id="content" class="body">
         <div>
           <h2 class="entry-title">
-            <a href="{{ SITEURL }}/{{ page.url }}" rel="bookmark"
-               title="Permalink to {{ page.title|striptags }}">{{ page.title }}
-
+            <a href="/{{ page.url }}" rel="bookmark" title="Permalink to {{ page.title|striptags }}">{{ page.title }}
             </a>
           </h2>
         </div>
         <div class="entry-content">
           {{ page.content }}
         </div><!-- /.entry-content -->
-        <div id="disqus_thread"></div>
+            {% if page.prev_page and page.prev_page.title != 'index'%}
+              <p class="prevpage"><i class="fa fa-arrow-left"></i> Older<br />
+              <a href=" /{{ page.prev_page.url}}">{{ page.prev_page.title }}</a></p>
+            {% endif %}
+
+            {% if page.next_page and page.next_page.title != 'index'%}
+              <p class="nextpage">Newer <i class="fa fa-arrow-right"></i><br />
+              <a href="/{{ page.next_page.url}}">{{ page.next_page.title }}</a></p>
+            {% endif %}
       </section>
 
       {% endif %}

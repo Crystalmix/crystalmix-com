@@ -25,7 +25,7 @@
       <section id="content" class="body">
         <div>
           <h2 class="entry-title">
-            <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark"
+            <a href="/{{ article.url }}" rel="bookmark"
                title="Permalink to {{ article.title|striptags }}">{{ article.title }}
             </a>
           </h2>
@@ -38,11 +38,11 @@
 
       {% if article.prev_article and article.prev_article.title != 'index'%}
           <p class="prevpost"><i class="fa fa-arrow-left"></i> Older<br />
-          <a href="{{ SITEURL }}/{{ article.prev_article.url}}">{{ article.prev_article.title }}</a></p>
+          <a href="/{{ article.prev_article.url}}">{{ article.prev_article.title }}</a></p>
       {% endif %}
       {% if article.next_article and article.next_article.title != 'index'%}
           <p class="nextpost">Newer <i class="fa fa-arrow-right"></i><br />
-          <a href="{{ SITEURL }}/{{ article.next_article.url}}">{{ article.next_article.title }}</a></p>
+          <a href="/{{ article.next_article.url}}">{{ article.next_article.title }}</a></p>
       {% endif %}
 
       {% endif %}
