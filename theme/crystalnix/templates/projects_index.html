@@ -1,11 +1,14 @@
-<section id="content">
+{% extends "base.html" %}
+
+{% block content %}
+  <section id="content">
         {% block content_title %}
         {% endblock %}
 
         {% for i in pages %}
             <article class="container">
                   <div> <h2 class="entry-title"><a href="/{{ i.url }}" rel="bookmark" title="Permalink to {{ i.title|striptags }}">{{ i.title }}</a></h2> </div>
-                  <div class="author">By {{i.author}}, {{i.date.strftime('%d.%m.%Y')}}</div>
+                  <div class="year">{{i.date.strftime('%Y')}}</div>
                   <div class="entry-content">
                     {{ i.summary }} <a href="/{{ i.url }}" class="continue-reading">READ MORE</a>
                   </div>
@@ -20,3 +23,4 @@
         <div style="clear: both;"></div>
             <br>
       </section><!-- /#content -->
+{% endblock %}

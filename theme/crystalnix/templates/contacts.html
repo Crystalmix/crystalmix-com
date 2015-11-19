@@ -2,83 +2,96 @@
 
 {% block content %}
     <div class="content home-page">
-        <section style="width: 700px ;margin: auto; margin-top: 100px">
+        <div class="container">
+                <h2 class="block-header text-center"> Got an idea?</h2>
                 <form role="form" class="form-horizontal"
                       accept-charset="UTF-8" action="https://formkeep.com/f/9ebefe7d7261"
                       method="post" enctype="multipart/form-data">
 
                     <input type='hidden' name='redirect_to' value="{{ SITEURL }}/contacts.html" />
 
-                    <div class="form-group">
-                        <div class="col-sm-6">
-                            <input type="text" class="form-control" id="inputName" name="name" placeholder="Name"/>
+                    <div class="form-part-one">
+
+                        <p class="text-center block-text">
+                            <b>
+                                We'd love to hear about your ideas! Introduce yourself and let us know how we
+                                can get in touch with you, then we'll grab some details about your project.
+                            </b>
+                        </p>
+
+                        <div class="form-group">
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control" id="inputName" name="name" placeholder="Name"/>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control" id="inputPhone" name="phone" placeholder="Phone (optional)"/>
+                            </div>
                         </div>
 
-                        <div class="col-sm-6">
-                            <input type="text" class="form-control" id="inputPhone" name="phone" placeholder="Phone (optional)"/>
+                        <div class="form-group">
+                            <div class="col-sm-12">
+                                <input type="email" class="form-control" id="inputEmail" name="email" placeholder="Email"/>
+                            </div>
                         </div>
+
+                        <div class="form-group">
+                            <div class="col-sm-12">
+                                <textarea rows="5"
+                                          name="message"
+                                          class="form-control"
+                                          id="inputMessage"
+                                          placeholder="Message"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                             <div class="col-sm-12">
+                                 <button id="nextButton" class="btn btn-info">NEXT</button>
+                            </div>
+                        </div>
+
                     </div>
 
-                    <div class="form-group">
-                        <div class="col-sm-12">
-                            <input type="email" class="form-control" id="inputEmail" name="email" placeholder="Email"/>
+                    <div class="form-part-two">
+                        <div class="form-group">
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control" id="inputBudget" name="budget" placeholder="Budget (optional)"/>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control" id="inputDeadline" name="phone" placeholder="Deadline (optional)"/>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-sm-12">
+                                <textarea rows="5"
+                                          name="projectDetails"
+                                          class="form-control"
+                                          id="inputProjectDetails"
+                                          placeholder="Project details (optional)"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-sm-12 text-center">
+                                or attach request for proposal (optional) <input type="file" name="file" placeholder="ATTACH" class="form-control"/>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <div class="col-sm-6">
+                                <button id="backButton" class="btn btn-default">BACK</button>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <button id="submitButton" type="submit" class="btn btn-success">SUBMIT</button>
+                            </div>
                         </div>
                     </div>
-
-                    <div class="form-group">
-                        <div class="col-sm-12">
-                            <textarea rows="5"
-                                      name="message"
-                                      class="form-control"
-                                      id="inputMessage"
-                                      placeholder="Message"></textarea>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                         <div class="col-sm-12">
-                             <button id="nextButton" class="btn btn-info">NEXT</button>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <div class="col-sm-6">
-                            <input type="text" class="form-control" id="inputBudget" name="budget" placeholder="Budget (optional)"/>
-                        </div>
-
-                        <div class="col-sm-6">
-                            <input type="text" class="form-control" id="inputDeadline" name="phone" placeholder="Deadline (optional)"/>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <div class="col-sm-12">
-                            <textarea rows="5"
-                                      name="projectDetails"
-                                      class="form-control"
-                                      id="inputProjectDetails"
-                                      placeholder="Project details (optional)"></textarea>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <div class="col-sm-12 text-center">
-                            or attach request for proposal (optional) <input type="file" name="file" placeholder="ATTACH" class="form-control"/>
-                        </div>
-                    </div>
-
-
-                    <div class="form-group">
-                        <div class="col-sm-6">
-                            <button id="backButton" class="btn btn-default">BACK</button>
-                        </div>
-
-                        <div class="col-sm-6">
-                            <button id="submitButton" type="submit" class="btn btn-success">SUBMIT</button>
-                        </div>
-                    </div>
-
                 </form>
-        </section>
+        </div>
     </div>
 {% endblock %}

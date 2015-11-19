@@ -1,27 +1,7 @@
 {% extends "base.html" %}
 
-{% if article.title == 'index' %}
-  {% block head %}
-    {{ super() }}
-    {% for keyword in article.keywords %}
-      <meta name="keywords" contents="{{keyword}}" />
-    {% endfor %}
-
-    {% for description in article.description %}
-      <meta name="description" contents="{{description}}" />
-    {% endfor %}
-
-    {% for tag in article.tags %}
-      <meta name="tags" contents="{{tag}}" />
-    {% endfor %}
-  {% endblock %}
-{% endif %}
-
 {% block content %}
   <div class="content home-page">
-      {% if article.title == 'index' %}
-        {% include 'blog_index.html' %}
-      {% else %}
       <section id="content" class="body">
         <div>
           <h2 class="entry-title">
@@ -45,6 +25,5 @@
           <a href="/{{ article.next_article.url}}">{{ article.next_article.title }}</a></p>
       {% endif %}
 
-      {% endif %}
     </div>
 {% endblock %}

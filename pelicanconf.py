@@ -68,10 +68,13 @@ SERVICES_URL = "/" + SERVICES_SAVE_AS
 CONTACTS_SAVE_AS = "contacts.html"
 CONTACTS_URL = "/" + CONTACTS_SAVE_AS
 
-TEMPLATE_PAGES = {"services.html": SERVICES_SAVE_AS,
-                  "contacts.html": CONTACTS_SAVE_AS
-                  }
-
+TEMPLATE_PAGES = {
+    "services.html": SERVICES_SAVE_AS,
+    "contacts.html": CONTACTS_SAVE_AS,
+    "projects_index.html": "projects/index.html",
+    "projects.template": "projects/projects.json",
+    "blog_index.html": "blog/index.html"
+}
 
 CDN_URL = ''
 

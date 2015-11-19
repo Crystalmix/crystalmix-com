@@ -1,0 +1,16 @@
+[
+    {% for i in pages if i.title != "index" %}
+
+      {
+        "title": "{{ i.title }}",
+        "url": "{{ i.url }}",
+        "year": "{{ i.date.strftime('%Y') }}",
+        "image_url": "{{i.image}}",
+        "type_of_work": "{{ i.type_of_work }}",
+        "tags_industry": "{{ i.tags_industry }}",
+        "platforms": "{{ i.platforms }}"
+      }{% if not loop.last %},{% endif %}
+
+    {% endfor %}
+
+]
