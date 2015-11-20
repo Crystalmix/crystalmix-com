@@ -82,6 +82,8 @@ $company_background_mobile: url(../img/home_company_mobile.png)
                     font-size: 12px
                     font-family: Monsterrat-Regular
                     letter-spacing: 1px
+                    &:focus
+                        outline: none
                     @media (min-width: $screen-sm-min)
                         width: 198px
                         height: 44px
@@ -100,8 +102,13 @@ $company_background_mobile: url(../img/home_company_mobile.png)
                         line-height: 17px
                         letter-spacing: 1.17px
                 .with-value__down-content__img
+                    width: 0
+                    margin: auto
+                    display: block
                     padding-top: 24px
                     padding-bottom: 39px
+                    img
+                        transform: translateX(-50%)
 
     .why-crystalnix
         background: #FD5412
@@ -168,10 +175,10 @@ $company_background_mobile: url(../img/home_company_mobile.png)
         .our-approach__content
             text-align: left
             padding-bottom: 50px
-            @media (max-width: $screen-sm-min)
-                margin: auto
-                width: 280px
+            margin: auto
+            width: 270px
             @media (min-width: $screen-sm-min)
+                width: 100%
                 text-align: center
                 padding-bottom: 160px
             .our-approach__block

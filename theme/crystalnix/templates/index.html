@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="content home-page">
+ <div class="content home-page">
 
         <div class="with-value">
             <div class="container">
@@ -12,7 +12,7 @@
                     <span class="with-value__content__text">
                         We leverage mobile and cloud technologies to develop pragmatic applications
                     </span>
-                    <button class="with-value__content__btn btn btn-default">
+                    <button onclick="location.href='work.html';" class="with-value__content__btn btn btn-default">
                         VIEW OUR WORK
                     </button>
                 </div>
@@ -20,14 +20,14 @@
                     <span class="with-value__down-content__text">
                         LEARN MORE
                     </span>
-                    <div class="with-value__down-content__img">
+                    <a href="#crystalnix" class="with-value__down-content__img">
                         <img src="{{ CDN_URL }}/theme/img/down_arrow.png">
-                    </div>
+                    </a>
                 </div>
             </div>
         </div>
 
-        <div class="why-crystalnix">
+        <div class="why-crystalnix" id="crystalnix">
             <div class="container">
                 <div class="why-crystalnix__content row">
                     <div class="col-lg-10 col-lg-offset-1">
@@ -99,9 +99,9 @@
             </div>
         </div>
 
-        <div class="company">
+        <div class="company" >
             <div class="company__image"></div>
-            <div class="company__content text-center">
+            <div class="company__content text-center" id="company">
                 <div class="container">
                     <span class="block-header">
                         Company
@@ -125,7 +125,7 @@
             </div>
         </div>
 
-        <div class="our-approach">
+        <div class="our-approach" id="approach">
             <div class="container text-center">
                 <span class="block-header">
                     Our Approach
@@ -180,7 +180,7 @@
             </div>
         </div>
 
-        <div class="our-clients">
+        <div class="our-clients" id="clients">
             <div class="container text-center">
                 <span class="block-header">
                     Our Clients
@@ -231,7 +231,7 @@
             </div>
         </div>
 
-        <div class="our-partners">
+        <div class="our-partners" id="partners">
             <div class="container text-center">
                 <span class="block-header">
                     Our Partners
@@ -272,3 +272,8 @@
 
     </div>
 {% endblock content %}
+
+{% block scripts %}
+    {{ super() }}
+    <script src="{{ CDN_URL }}/theme/js/bootstrap-hover-dropdown.min.js"></script>
+{% endblock %}
