@@ -5,7 +5,7 @@ $work_background: url(../img/our_work/work_background.png)
 $work_background_mobile: url(../img/our_work/work_background_mobile.png)
 
 
-.work
+.works
     padding-top: 65px
     @media (min-width: $screen-sm-min)
         padding-top: 89px
@@ -33,3 +33,98 @@ $work_background_mobile: url(../img/our_work/work_background_mobile.png)
         background-image: $work_background_mobile
         @media (min-width: $screen-sm-min)
             background-image: $work_background
+
+    .works-filter
+        position: relative
+        .slick-arrow
+            background: black
+        .slick-slider
+            margin-bottom: 0
+        .slick-slide
+            &:hover
+                cursor: pointer
+            &:focus
+                outline: none
+        .dropdown
+            width: 100%
+            display: inline-block
+            padding: 0 37px
+            @media (min-width: $screen-sm-min)
+                width: auto
+                position: static
+                .dropdown-menu
+                    position: absolute !important
+            .dropdown-menu
+                width: 100%
+                box-shadow: none
+                position: static
+                margin: 0
+                border: 0
+                border-radius: 0
+                text-align: center
+
+            .filter-elem
+                color: #11364D
+                text-decoration: none
+                padding: 35px 0
+                display: block
+                font-size: 14px
+                line-height: 17px
+                letter-spacing: 1.05px
+                font-family: Monsterrat-Regular
+                &:hover
+                    color: #FD5412
+            &.open
+                a:focus
+                    color: #FD5412
+
+    .work-background
+        background: #F4F5F5
+    .works__work
+        padding-top: 30px
+        padding-bottom: 30px
+        .works__work__descripton
+            span
+                display: block
+            button
+                    width: 143px
+                    height: 40px
+                    color: white
+                    border: 0
+                    background: #FD5412
+                    font-size: 12px
+                    font-family: Monsterrat-Regular
+                    letter-spacing: 1px
+                    &:focus
+                        outline: none
+                    @media (min-width: $screen-sm-min)
+                        width: 198px
+                        height: 44px
+                        font-size: 16px
+                        letter-spacing: 1.33px
+            .works__work__descripton__title
+                font-family: Montserrat-Light
+                font-size: 36px
+                color: #FD5412
+                letter-spacing: 3.59px
+                line-height: 43px
+                @media (min-width: $screen-sm-min)
+                    font-size: 40px
+                    color: #FD5412
+                    letter-spacing: 4px
+                    line-height: 48px
+            .works__work__descripton__year
+                font-family: Montserrat-Light;
+                font-size: 20px
+                color: #11364D
+                letter-spacing: 1.25px
+                line-height: 24px
+                padding-bottom: 28px
+            .works__work__descripton__type-of-work
+                font-family: Montserrat-Regular
+                font-size: 14px
+                color: #11364D
+                line-height: 26px
+                letter-spacing: 0
+            .works__work__descripton__icons
+                padding-top: 28px
