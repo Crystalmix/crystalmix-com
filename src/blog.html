@@ -77,29 +77,30 @@
         </div>
     </nav>
 
-    <div ng-controller="worksCtrl" class="content works">
+    <div ng-controller="blogsCtrl" class="content blogs">
 
         <div class="page-logo">
             <div class="container">
                 <div class="page-logo__content row">
                     <span class="page-logo__content__header">
-                        Our work
+                        Our blog
                     </span>
                     <span class="page-logo__content__text">
-                        Crystalnix works across multiple platforms, designing and building apps with outstanding ux and ui to meet all of your business needs.
+                        We like to keep up to date with what’s going on in the world of IT and technology and we also
+                        love to share our thoughts with you! Read on to see what we think of the latest tech.
                     </span>
                 </div>
                 <div class="page-logo__down-content row">
                     <div class="page-logo__down-content__img">
-                        <a href="#work-filter">
-                            <img src="./img/down_arrow.png">
+                        <a href="#blog-filter">
+                            <img src="./img/our_blog/blog_arrow.png">
                         </a>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="works-filter" id="work-filter">
+        <div class="blogs-filter" id="blog-filter">
             <div class="container text-center">
                 <div ng-repeat="filter in filters" class="dropdown">
                     <a href="#" class="dropdown-toggle filter-elem" data-toggle="dropdown">
@@ -108,42 +109,30 @@
                     </a>
                     <div class="dropdown-menu">
                         <div class="container">
-                            <div class="work-slider">
+                            <div class="blog-slider">
                                 <div ng-repeat="tag in filter.tags" ng-click="setFilter(filter.tag_name, tag)" class="filter-elem">{{tag}}</div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-
-        <div ng-repeat="work in newworks | workFilter:currentFilter | limitTo: counts" ng-class="{'work-background': $index % 2 != 0 }" class="works__work">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-8 text-right">
-                        <img src="{{work.image_url}}">
-                    </div>
-                    <div class="col-sm-4 works__work__descripton">
-                        <span class="works__work__descripton__title">{{work.title}}</span>
-                        <span class="works__work__descripton__year">{{work.year}}</span>
-                        <div class="row">
-                            <span ng-repeat="item in work.type_of_work"
-                                    class="works__work__descripton__type-of-work col-md-12 col-xs-6">
-                                {{item.charAt(0).toUpperCase() + item.substr(1)}}
-                            </span>
-                        </div>
-                        <div class="row works__work__descripton__icons">
-                            <div class="col-xs-6 col-sm-12">PLATFORM ICONS HERE</div>
-                            <div class="col-xs-6 col-sm-12">
-                                <button class="btn btn-default">
-                                    READ MORE
-                                </button>
+                <div class="dropdown">
+                    <a href="#" class="dropdown-toggle filter-elem" data-toggle="dropdown">
+                        SEARCH
+                        <b>&#128269</b>
+                    </a>
+                    <div class="dropdown-menu">
+                        <div class="container">
+                            <div class="filter-elem">
+                                <input class="input-sm" placeholder="SEARCH">
+                                <b>&#128269</b>
+                                <b>&#215</b>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+ч
         <button ng-click="pagination()" class="btn btn-danger btn-lg" style="margin: auto; display: block;">PAGINATION</button>
     </div>
 
@@ -245,7 +234,7 @@
     <script src="js/respond.min.js"></script>
     <script src="js/html5shiv.min.js"></script>
     <script src="js/slick.min.js"></script>
-    <script src="js/page.work.js"></script>
+    <script src="js/page.blog.js"></script>
 
 
 </body>

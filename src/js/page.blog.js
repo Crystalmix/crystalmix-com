@@ -1,11 +1,11 @@
 $(document).ready(function(){
 
-    var industry = $('.works-filter .dropdown'),
+    var industry = $('.blogs-filter .dropdown'),
         type_of_work = $('#type-of-work'),
         year = $('#year');
 
     industry.on('shown.bs.dropdown', function() {
-        $('.work-slider').slick({
+        $('.blog-slider').slick({
             slidesToShow: 5,
             slidesToScroll: 1,
             swipeToSlide: false,
@@ -31,13 +31,13 @@ $(document).ready(function(){
     });
 
     industry.on('hide.bs.dropdown', function() {
-        $('.work-slider').slick('unslick');
+        $('.blog-slider').slick('unslick');
     });
 });
 
 ngApp = angular.module('ngApp', []);
 
-ngApp.filter('workFilter', function() {
+ngApp.filter('blogFilter', function() {
    return function (items, currentFilter) {
        if (!items || !currentFilter) return items;
        var result = [];
@@ -50,7 +50,7 @@ ngApp.filter('workFilter', function() {
    };
 });
 
-ngApp.controller('worksCtrl', function($scope) {
+ngApp.controller('blogsCtrl', function($scope) {
 
     var jsonParser = function(json) {
         var result = angular.copy(json);
@@ -64,12 +64,12 @@ ngApp.controller('worksCtrl', function($scope) {
 
     $scope.filters = [
         {
-            label: 'INDUSTRY',
+            label: 'TAGS',
             tag_name: 'tags_industry',
             tags: ['ALL', 'RETAIL', 'IT SECURITY', 'TRANSPORTATION', 'HELPDESK', 'TELECOMMUNICATION', 'E-COMMERCE']
         },
         {
-            label: 'TYPE OF WORK',
+            label: 'AUTHOR',
             tag_name: 'type_of_work',
             tags: ['ALL', 'STRATEGY', 'UX DESIGN', 'UI DESIGN', 'DEVELOPMENT']
         },
