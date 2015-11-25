@@ -1,0 +1,44 @@
+{
+    "articles": [
+        {% for i in articles %}
+          {
+            "title": "{{ i.title }}",
+            "url": "{{ i.url }}",
+            "date": "{{i.date.strftime('%d.%m.%Y')}}",
+            "summary": "{{i.summary.replace('"','\\"').replace("\n", "")}}",
+            "author": "{{ i.author }}"
+          }{% if not loop.last %},{% endif %}
+
+        {% endfor %}
+    ],
+    "articles_counter": {
+        "tags":[
+        {% for tag in tags|map(attribute=0)|sort(attribute='articles_counter', reverse=true) %}
+          {
+            "name": "{{tag.name}}",
+            "count": {{tag.articles_counter}}
+          }{% if not loop.last %},{% endif %}
+
+        {% endfor %}
+        ],
+        "authors":[
+        {% for author in authors|map(attribute=0)|sort(attribute='articles_counter', reverse=true) %}
+          {
+            "name": "{{author.name}}",
+            "count": {{author.articles_counter}}
+          }{% if not loop.last %},{% endif %}
+
+        {% endfor %}
+        ],
+        "years":[
+        {% for year, count in years.iteritems() %}
+          {
+            "year": "{{ year }}",
+            "count": {{ count }}
+          }{% if not loop.last %},{% endif %}
+
+        {% endfor %}
+        ]
+    }
+
+}

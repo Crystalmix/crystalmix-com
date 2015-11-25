@@ -1,5 +1,5 @@
 [
-    {% for i in pages if i.title != "index" %}
+    {% for i in pages %}
 
       {
         "title": "{{ i.title }}",

@@ -1,5 +1,5 @@
 Title: Designing SSH terminal UI for fast access to unix-like servers from mobile devices2
-Date: 2013-01-30 06:03
+Date: 2013-01-30 06:02
 Tags: serverauditor
 Author: Roman Kudiyarov
 

@@ -73,7 +73,8 @@ TEMPLATE_PAGES = {
     "contacts.html": CONTACTS_SAVE_AS,
     "projects_index.html": "projects/index.html",
     "projects.template": "projects/projects.json",
-    "blog_index.html": "blog/index.html"
+    "blog_index.html": "blog/index.html",
+    "blog.template": "blog/blog.json"
 }
 
 CDN_URL = ''
