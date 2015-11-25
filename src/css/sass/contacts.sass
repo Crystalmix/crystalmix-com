@@ -1,0 +1,76 @@
+$screen-sm-min: 768px
+$screen-md-min: 992px
+$form-input-color: #175477
+$contacts-main-font: #11364D
+
+.contacts
+  .contacts-info
+    background: #F4F5F5
+    padding-top: 167px
+    #contacts-header
+      font-family: Montserrat-Light
+      font-size: 40px
+      color: $contacts-main-font
+      letter-spacing: 4px
+      line-height: 48px
+    #contacts-email
+      margin-top: 51px
+      font-family: Montserrat-Regular
+      font-size: 14px
+      color: $contacts-main-font
+      #email
+        margin-top: 15px
+  #offices
+    margin-top: 43px
+    margin-bottom: 49px
+    .office-title
+      font-family: Montserrat-Hairline
+      font-size: 24px
+      color: #FD5412
+      letter-spacing: 2.4px
+    .office-subtitle
+      font-family: Montserrat-Light
+      font-size: 14px
+      color: $contacts-main-font
+      letter-spacing: 1px
+      margin-bottom: 31px
+    .office-image
+      width: 97%
+    .office-info
+      font-family: Montserrat-Regular
+      font-size: 14px
+      color: $contacts-main-font
+      letter-spacing: 0.5px
+      margin-top: 39px
+      .office-location
+        padding-left: 0
+      .office-phone
+        padding-left: 10px
+      .office-tz
+        padding-left: 16px
+      .office-info-text
+        margin-top: 10px
+
+  form#contactForm
+    input, textarea
+      &::-webkit-input-placeholder
+        color: $form-input-color
+      &:-moz-placeholder
+        color: $form-input-color
+      &:-ms-input-placeholder
+        color: $form-input-color
+      border: 2px solid $form-input-color
+      font-size: 14px
+
+      @media (min-width: $screen-sm-min)
+        padding: 21px
+        margin-bottom: 24px
+        margin-right: 19px
+
+    input
+      height: 60px
+    textarea
+      resize: none
+
+
+

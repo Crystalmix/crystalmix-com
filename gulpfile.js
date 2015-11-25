@@ -8,7 +8,7 @@ gulp.task('sass', function () {
     gulp.src('./src/css/sass/**/*.sass')
         .pipe(concat('styles.sass'))
         .pipe(sass().on('error', sass.logError))
-        .pipe(gulp.dest('./theme/crystalnix/static/css'));
+        .pipe(gulp.dest('./src/css/'));
 });
 
 gulp.task('default', function () {
