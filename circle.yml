@@ -1,0 +1,17 @@
+machine:
+  python:
+    version: 2.7.3
+
+  environment:
+    # AWS_SECRET_ACCESS_KEY: SET_THIS_VARIABLE_IN_WEB
+    # AWS_ACCESS_KEY_ID: SET_THIS_VARIABLE_IN_WEB
+
+test:
+  override:
+    - make html
+
+deployment:
+  production:
+    branch: backend
+    commands:
+      - S3_BUCKET=crystalnix.com make s3_upload
