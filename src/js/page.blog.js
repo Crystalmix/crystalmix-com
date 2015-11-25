@@ -28,11 +28,17 @@ $(document).ready(function(){
                 }
             ]
         });
+        $('.slick-arrow').on('click', function (event) {
+            event.preventDefault();
+            event.stopPropagation();
+        });
     });
 
     industry.on('hide.bs.dropdown', function() {
         $('.blog-slider').slick('unslick');
     });
+
+
 });
 
 ngApp = angular.module('ngApp', []);

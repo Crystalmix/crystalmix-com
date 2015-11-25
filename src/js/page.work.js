@@ -41,6 +41,14 @@ ngApp.filter('workFilter', function() {
    return function (items, currentFilter) {
        if (!items || !currentFilter) return items;
        var result = [];
+       if (currentFilter.label == 'earlier') {
+           angular.forEach(items, function (item) {
+               if (item[currentFilter.tag_name] < '2013') {
+                   result.push(item);
+               }
+           });
+           return result;
+       }
        angular.forEach(items, function(item) {
            if (item[currentFilter.tag_name].indexOf(currentFilter.label) >= 0) {
                result.push(item);
@@ -86,7 +94,7 @@ ngApp.controller('worksCtrl', function($scope) {
         {
             title: "Serverauditor",
             url: "",
-            year: "2013",
+            year: "2012",
             image_url: "img/our_work/works/serverauditor.png",
             type_of_work: "Strategy,     Development",
             tags_industry: "Helpdesk",
@@ -113,7 +121,7 @@ ngApp.controller('worksCtrl', function($scope) {
         {
             title: "Weaved",
             url: "",
-            year: "2015",
+            year: "2011",
             image_url: "img/our_work/works/iPhone.png",
             type_of_work: "UI design",
             tags_industry: "Retail",
