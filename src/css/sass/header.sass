@@ -8,10 +8,26 @@ $screen-sm-min: 768px
 $screen-md-min: 992px
 $screen-lg-min: 1200px
 
+.overlay
+    background: #243C4C
+    opacity: 0.6
+    position: fixed
+    z-index: 100
+    width: 100%
+    height: 100vh
+
 
 .text-orange
     @media (min-width: $screen-sm-min)
         color: #FD5412 !important
+
+.none-on-desctop
+    @media (min-width: $screen-sm-min)
+        display: none !important
+
+.block-on-desctop
+    @media (min-width: $screen-sm-min)
+        display: block !important
 
 .header
     font-size: $header_mobile_font_size
