@@ -118,9 +118,9 @@
         </div>
 
         <div ng-repeat="work in newworks | workFilter:currentFilter | limitTo: counts" ng-class="{'work-background': $index % 2 != 0 }" class="works__work">
-            <div class="container">
+            <div class="container works__work__content">
                 <div class="row">
-                    <div class="col-sm-7 text-right">
+                    <div class="col-sm-7 text-right works__work__image">
                         <img src="{{work.image_url}}">
                     </div>
                     <div class="col-sm-5 works__work__descripton">
@@ -129,7 +129,7 @@
                         <div class="row">
                             <span ng-repeat="item in work.type_of_work"
                                     class="works__work__descripton__type-of-work col-sm-12 col-xs-6">
-                                {{item.charAt(0).toUpperCase() + item.substr(1)}}
+                                {{item}}
                             </span>
                         </div>
                         <div class="row works__work__descripton__icons">

@@ -81,9 +81,29 @@ $work_background_mobile: url(../img/our_work/work_background_mobile.png)
     .work-background
         background: #F4F5F5
     .works__work
+        height: 730px
         padding-top: 30px
         padding-bottom: 30px
+        .works__work__content
+            @media (min-width: $screen-sm-min)
+                height: 100%
+                position: relative
+        .works__work__image
+            @media (min-width: $screen-sm-min)
+                position: absolute
+                left: 0
+                top: 50%
+                transform: translateY(-50%)
+            img
+                width: 100%
+                max-width: 645px
         .works__work__descripton
+
+            @media (min-width: $screen-sm-min)
+                position: absolute
+                right: 0
+                top: 50%
+                transform: translateY(-50%)
             span
                 display: block
             button
