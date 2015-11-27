@@ -7,6 +7,7 @@
     "html5shiv": "~3.7.3",
     "slick-carousel": "~1.5.8",
     "list.js": "~1.1.1",
-    "angular": "~1.4.8"
+    "angular": "~1.4.8",
+    "jquery-validation": "~1.14.0"
   }
 }

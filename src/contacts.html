@@ -161,17 +161,103 @@
             </div>
         </div>
 
-        <div class="contact-form">
-            <div class="container text-center">
-                <span class="block-header">
+        <div class="contacts-form container">
+                <span class="block-header text-center">
                     Got an idea?
                 </span>
-                <span class="col-md-8 col-md-offset-2 block-text">
-                    We’d love to hear about your ideas! Introduce yourself and let us know how we can get in touch with you,
-                    then we’ll grab some details about your project.
-                </span>
+                <form id="contactForm" role="form" class="form-horizontal col-lg-10 col-lg-offset-1 nopadding"
+                      accept-charset="UTF-8" action="https://formkeep.com/f/9ebefe7d7261"
+                      method="post" enctype="multipart/form-data">
+
+                    <input type='hidden' name='redirect_to' value="localhost:8000/contacts.html" />
+
+                    <div class="form-part-one">
+
+                        <span class="col-md-8 col-md-offset-2 block-text text-center">
+                            We’d love to hear about your ideas! Introduce yourself and let us know how we can get in touch with you,
+                            then we’ll grab some details about your project.
+                        </span>
+
+                        <div class="form-group">
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control" id="inputName" name="name" placeholder="Name" required/>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control" id="inputPhone" name="phone" placeholder="Phone (optional)"/>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-sm-12">
+                                <input type="email" class="form-control" id="inputEmail" name="email" placeholder="Email" required/>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-sm-12">
+                                <textarea rows="5"
+                                          name="message"
+                                          class="form-control"
+                                          id="inputMessage"
+                                          placeholder="Message"
+                                          required></textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-group text-center">
+                            <button id="nextButton" type="submit" class="btn">NEXT</button>
+                        </div>
+
+                    </div>
+
+                    <div class="form-part-two">
+                        <span class="col-md-10 col-md-offset-1 block-text text-center">
+                            Is there anything you can tell us about your project already so we can get this started?
+                            Don’t worry if you’re not sure yet, you can leave us a brief message in the next step.
+                        </span>
+                       <div class="form-group">
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control" id="inputBudget" name="budget" placeholder="Budget (optional)"/>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control" id="inputDeadline" name="phone" placeholder="Deadline (optional)"/>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-sm-12">
+                                <textarea rows="5"
+                                          name="projectDetails"
+                                          class="form-control"
+                                          id="inputProjectDetails"
+                                          placeholder="Project details (optional)"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-group text-center form__attach">
+                            <span id="selected-file">or attach request for proposal (optional)</span>
+                            <div class="fileUpload btn" id="attach-btn">
+                                <span><img src="img/contacts/clip.png"> ATTACH</span>
+                                <input type="file" name="file" placeholder="ATTACH" class="form-control upload"/>
+                            </div>
+                            <div class="btn" id="delete-btn">
+                                <span><img src="img/contacts/clip.png"> DELETE</span>
+                            </div>
+                        </div>
+
+
+
+                        <div class="form-group text-center">
+                                <button id="backButton" type="button" class="btn">BACK</button>
+
+                                <button id="submitButton" type="submit" class="btn btn-success">SUBMIT</button>
+                        </div>
+                    </div>
+
+                </form>
             </div>
-        </div>
 
     </div>
 
@@ -268,10 +354,12 @@
     </footer>
 
     <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/respond.min.js"></script>
     <script src="js/html5shiv.min.js"></script>
     <script src="js/page.navigation.js"></script>
+    <script src="js/page.contacts.form.js"></script>
 
 </body>
 </html>
