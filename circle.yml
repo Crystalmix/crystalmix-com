@@ -6,11 +6,6 @@ machine:
     # AWS_SECRET_ACCESS_KEY: SET_THIS_VARIABLE_IN_WEB
     # AWS_ACCESS_KEY_ID: SET_THIS_VARIABLE_IN_WEB
 
-dependencies:
-  pre:
-    - sudo apt-get update; sudo apt-get install s3cmd
-    - printf "[default]\naccess_key = $S3_ACCESS_KEY\n secret_key = $S3_SECRET_KEY" > ~/.s3cfg
-
 test:
   override:
     - make html
@@ -19,4 +14,5 @@ deployment:
   production:
     branch: backend
     commands:
+      - echo -e "[default]\naccess_key = $S3_ACCESS_KEY\nsecret_key=$S3_ACCESS_KEY\n" > ~/.s3cfg
       - S3_BUCKET=crystalnix.com make s3_upload
