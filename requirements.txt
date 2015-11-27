@@ -1,2 +1,4 @@
 pelican==3.6.3
 Markdown==2.6.4
+
+s3cmd
