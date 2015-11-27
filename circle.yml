@@ -14,5 +14,4 @@ deployment:
   production:
     branch: backend
     commands:
-      - echo -e "[default]\naccess_key = $S3_ACCESS_KEY\nsecret_key=$S3_ACCESS_KEY\n" > ~/.s3cfg
       - S3_BUCKET=crystalnix.com make s3_upload
