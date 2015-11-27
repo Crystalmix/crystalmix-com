@@ -14,4 +14,8 @@ deployment:
   production:
     branch: backend
     commands:
+      - echo "[default]" > .s3cmd
+      - echo "access_key = $KEY" >> .s3cmd
+      - echo "secret_key = $SECRET" >> .s3cmd
+      - echo "host_base = s3.amazonaws.com" >> .s3cmd
       - S3_BUCKET=crystalnix.com make s3_upload
