@@ -33,6 +33,11 @@ $(document).ready(function(){
     industry.on('hide.bs.dropdown', function() {
         $('.work-slider').slick('unslick');
     });
+
+    $('.works-filter .dropdown-menu').on('click', function (event) {
+        event.preventDefault();
+        event.stopPropagation();
+    });
 });
 
 ngApp = angular.module('ngApp', []);
@@ -104,7 +109,7 @@ ngApp.controller('worksCtrl', function($scope) {
             title: "Weaved",
             url: "",
             year: "2015",
-            image_url: "img/our_work/works/iPhone.png",
+            image_url: "img/our_work/works/serverauditor.png",
             type_of_work: "UI design",
             tags_industry: "Retail",
             platforms: "android"
@@ -122,7 +127,7 @@ ngApp.controller('worksCtrl', function($scope) {
             title: "Weaved",
             url: "",
             year: "2011",
-            image_url: "img/our_work/works/iPhone.png",
+            image_url: "img/our_work/works/serverauditor.png",
             type_of_work: "UI design",
             tags_industry: "Retail",
             platforms: "android"
@@ -138,6 +143,7 @@ ngApp.controller('worksCtrl', function($scope) {
     $scope.newworks = jsonParser($scope.works);
 
     $scope.setFilter = function(tag_name ,tag) {
+        $('.dropdown.open .dropdown-toggle').click();
         if (tag.toLowerCase() == 'all') {
             $scope.currentFilter = null
         } else {

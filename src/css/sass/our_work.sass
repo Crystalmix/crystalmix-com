@@ -4,7 +4,6 @@ $screen-md-min: 992px
 $work_background: url(../img/our_work/work_background.png)
 $work_background_mobile: url(../img/our_work/work_background_mobile.png)
 
-
 .works
     padding-top: 65px
     @media (min-width: $screen-sm-min)
@@ -33,25 +32,21 @@ $work_background_mobile: url(../img/our_work/work_background_mobile.png)
         background-image: $work_background_mobile
         @media (min-width: $screen-sm-min)
             background-image: $work_background
-
     .works-filter
         position: relative
-        .slick-arrow
-            background: black
-        .slick-slider
-            margin-bottom: 0
-        .slick-slide
-            &:hover
-                cursor: pointer
-            &:focus
-                outline: none
+        .work-slider
+            padding-left: 30px
+            padding-right: 30px
         .dropdown
             width: 100%
             display: inline-block
-            padding: 0 37px
+            padding: 0
+            .dropdown-backdrop
+                display: none !important
             @media (min-width: $screen-sm-min)
                 width: auto
                 position: static
+                padding: 0 37px
                 .dropdown-menu
                     position: absolute !important
             .dropdown-menu
@@ -64,6 +59,9 @@ $work_background_mobile: url(../img/our_work/work_background_mobile.png)
                 text-align: center
 
             .filter-elem
+                cursor: pointer
+                outline: none
+                z-index: 100
                 color: #11364D
                 text-decoration: none
                 padding: 35px 0
@@ -72,7 +70,7 @@ $work_background_mobile: url(../img/our_work/work_background_mobile.png)
                 line-height: 17px
                 letter-spacing: 1.05px
                 font-family: Monsterrat-Regular
-                &:hover
+                &.dropdown-toggle
                     color: #FD5412
             &.open
                 a:focus
@@ -81,24 +79,34 @@ $work_background_mobile: url(../img/our_work/work_background_mobile.png)
     .work-background
         background: #F4F5F5
     .works__work
-        height: 730px
         padding-top: 30px
         padding-bottom: 30px
+        @media (min-width: $screen-sm-min)
+            height: 730px
         .works__work__content
+            max-width: 350px
             @media (min-width: $screen-sm-min)
+                max-width: none
                 height: 100%
                 position: relative
         .works__work__image
+            padding-bottom: 30px
             @media (min-width: $screen-sm-min)
+                padding-bottom: 0
                 position: absolute
                 left: 0
                 top: 50%
                 transform: translateY(-50%)
+                img
+                    max-height: none
             img
                 width: 100%
                 max-width: 645px
+        .works__work__descripton__btn
+            padding: 0
+            @media (min-width: $screen-sm-min)
+                padding: 0 15px 0 15px
         .works__work__descripton
-
             @media (min-width: $screen-sm-min)
                 position: absolute
                 right: 0
@@ -122,8 +130,8 @@ $work_background_mobile: url(../img/our_work/work_background_mobile.png)
                         height: 44px
                         font-size: 16px
                         letter-spacing: 1.33px
-            .works__work__descripton__title
-                font-family: Montserrat-Light
+            .works__work__title
+                font-family: Monsterrat-Light
                 font-size: 36px
                 color: #FD5412
                 letter-spacing: 3.59px
@@ -133,15 +141,15 @@ $work_background_mobile: url(../img/our_work/work_background_mobile.png)
                     color: #FD5412
                     letter-spacing: 4px
                     line-height: 48px
-            .works__work__descripton__year
-                font-family: Montserrat-Light;
+            .works__work__year
+                font-family: Monsterrat-Light
                 font-size: 20px
                 color: #11364D
                 letter-spacing: 1.25px
                 line-height: 24px
                 padding-bottom: 28px
-            .works__work__descripton__type-of-work
-                font-family: Montserrat-Regular
+            .works__work__type-of-work
+                font-family: Monsterrat-Regular
                 font-size: 14px
                 color: #11364D
                 line-height: 26px

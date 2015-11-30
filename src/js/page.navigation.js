@@ -1,9 +1,9 @@
 $(document).ready(function() {
 
     $('.header .dropdown-menu a').on('click', function () {
+        $('.dropdown.open .dropdown-toggle').click();
         $('.navbar-collapse').collapse('hide');
         $('.header__menu-button').addClass('collapsed');
-        $('.dropdown.open .dropdown-toggle').click();
         $('.dropdown-menu').removeClass('block-on-desctop').addClass('none-on-desctop');
     });
 
