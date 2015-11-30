@@ -14,27 +14,27 @@
         <div class="container">
             <div class="row">
                 <div class="navbar-header col-lg-3 col-md-3 col-sm-1">
-                    <a href="#">
+                    <a href="index.html">
                         <img class="hidden-xs" src="img/logo.png" alt="logo">
                         <img class="visible-xs pull-left" src="img/logo_mobile.png" alt="logo">
                         <span class="header__logo_text hidden-xs hidden-sm">
                             CRYSTALNIX
                         </span>
                     </a>
-                    <button type="button" class="header__menu-button navbar-toggle" data-toggle="collapse" data-target="#responsive-navbar">
+                    <button type="button" class="header__menu-button navbar-toggle collapsed" data-toggle="collapse" data-target="#responsive-navbar">
                         Menu
-                        <b class="caret"></b>
+                        <img src="img/menu_arrow_up.png">
                     </button>
                 </div>
                 <div class="header_top_shadow col-lg-9 col-md-9 col-sm-11">
                     <div class="collapse navbar-collapse" id="responsive-navbar">
                         <ul class="navbar__list nav navbar-nav">
                             <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <a href="index.html" class="col-xs-10 col-sm-12 text-orange">
                                     Who we are
-                                    <b class="caret visible-xs pull-right"></b>
-                                    <b class="caret hidden-xs"></b>
+                                    <img class="hidden-xs" src="img/menu_active_arrow_down.png">
                                 </a>
+                                <button class="col-xs-2 visible-xs btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown"><img src="img/menu_arrow_down.png"></button>
                                 <ul class="header_dropdown-list dropdown-menu">
                                     <div class="container">
                                         <li><a href="index.html#crystalnix">Why Crystalnix</a></li>
@@ -46,11 +46,11 @@
                                 </ul>
                             </li>
                             <li class="dropdown">
-                                <a href="" class="dropdown-toggle" data-toggle="dropdown">
+                                <a href="services.html" class="col-xs-10 col-sm-12">
                                     Our services
-                                    <b class="caret visible-xs pull-right"></b>
-                                    <b class="caret hidden-xs"></b>
+                                    <img class="hidden-xs" src="img/menu_arrow_down.png">
                                 </a>
+                                <button class="col-xs-2 visible-xs btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown"><img src="img/menu_arrow_down.png"></button>
                                 <ul class="header_dropdown-list dropdown-menu">
                                     <div class="container">
                                         <li><a href="services.html#product">Product Development</a></li>
@@ -63,10 +63,10 @@
                                 <a class="dropdown-toggle" href="work.html">Our work</a>
                             </li>
                             <li class="dropdown">
-                                <a class="dropdown-toggle" href="#">Contact us</a>
+                                <a class="dropdown-toggle" href="contacts.html">Contact us</a>
                             </li>
                             <li class="dropdown">
-                                <a class="dropdown-toggle" href="#">Blog</a>
+                                <a class="dropdown-toggle" href="blog.html">Blog</a>
                             </li>
                         </ul>
                     </div>
@@ -74,6 +74,8 @@
             </div>
         </div>
     </nav>
+
+    <div class="overlay" style="display:none;"></div>
 
     <div class="content home-page">
 
@@ -382,7 +384,7 @@
                             </a>
                         </li>
                     </ul>
-                    <ul class="col-md-3 col-sm-4 list-unstyled nopadding">
+                    <ul class="col-md-4 col-sm-4 list-unstyled nopadding">
                         <li class="footer__padding-bottom">
                             <a href="#">
                                 <strong>Our services</strong>
@@ -419,7 +421,7 @@
                             </a>
                         </li>
                     </ul>
-                    <div class="footer_social-networks col-md-3 col-sm-4 col-md-offset-3">
+                    <div class="footer_social-networks col-md-3 col-sm-4 col-md-offset-2">
                         <a>
                             <img src="img/facebook.png">
                         </a>
@@ -442,10 +444,7 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/respond.min.js"></script>
     <script src="js/html5shiv.min.js"></script>
-
-    <script>
-
-    </script>
+    <script src="js/page.navigation.js"></script>
 
 </body>
 </html>

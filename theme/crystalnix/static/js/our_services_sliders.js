@@ -61,8 +61,8 @@ $(document).ready(function(){
                 active_mobile_slide = $('#business');
                 break;
         }
+        active_mobile_slide.css('opacity', 0);
         active_mobile_slide.show();
-        active_mobile_slide.css('opacity', 0)
         active_mobile_slide.stop().animate({opacity: "1"}, 500);
         active_mobile_slide_name.stop().animate({opacity: "1"}, 500);
     });
@@ -88,8 +88,8 @@ $(document).ready(function(){
                 active_cloud_slide = $('#migration');
                 break;
         }
+        active_cloud_slide.css('opacity', 0);
         active_cloud_slide.show();
-        active_cloud_slide.css('opacity', 0)
         active_cloud_slide.stop().animate({opacity: "1"}, 500);
         active_cloud_slide_name.stop().animate({opacity: "1"}, 500);
     });

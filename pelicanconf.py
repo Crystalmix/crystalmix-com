@@ -3,7 +3,7 @@
 from __future__ import unicode_literals
 
 SITENAME = u'Crystalnix'
-SITEURL = u'localhost:8000'
+SITE_URL = u'crystalnix.com.s3-website-us-west-2.amazonaws.com'
 
 PATH = 'content'
 
@@ -76,8 +76,6 @@ TEMPLATE_PAGES = {
     "blog_index.html": "blog/index.html",
     "blog.template": "blog/blog.json"
 }
-
-CDN_URL = ''
 
 LOAD_CONTENT_CACHE = False
 

@@ -5,71 +5,70 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Crystalnix</title>
-    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="img/favicon.ico" />
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css" />
-</head>
+    <link href="css/styles.css" rel="stylesheet">
+    <link href="css/slick.css" rel="stylesheet">
 
+</head>
 <body class="main-font">
 
     <nav class="header navbar navbar-fixed-top">
         <div class="container">
             <div class="row">
                 <div class="navbar-header col-lg-3 col-md-3 col-sm-1">
-                    <a href="#">
+                    <a href="index.html">
                         <img class="hidden-xs" src="img/logo.png" alt="logo">
                         <img class="visible-xs pull-left" src="img/logo_mobile.png" alt="logo">
                         <span class="header__logo_text hidden-xs hidden-sm">
                             CRYSTALNIX
                         </span>
                     </a>
-                    <button type="button" class="header__menu-button navbar-toggle" data-toggle="collapse" data-target="#responsive-navbar">
+                    <button type="button" class="header__menu-button navbar-toggle collapsed" data-toggle="collapse" data-target="#responsive-navbar">
                         Menu
-                        <b class="caret"></b>
+                        <img src="img/menu_arrow_up.png">
                     </button>
                 </div>
                 <div class="header_top_shadow col-lg-9 col-md-9 col-sm-11">
                     <div class="collapse navbar-collapse" id="responsive-navbar">
                         <ul class="navbar__list nav navbar-nav">
                             <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <a href="index.html" class="col-xs-10 col-sm-12">
                                     Who we are
-                                    <b class="caret visible-xs pull-right"></b>
-                                    <b class="caret hidden-xs"></b>
+                                    <img class="hidden-xs" src="img/menu_arrow_down.png">
                                 </a>
+                                <button class="col-xs-2 visible-xs btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown"><img src="img/menu_arrow_down.png"></button>
                                 <ul class="header_dropdown-list dropdown-menu">
                                     <div class="container">
-                                        <li><a href="/#crystalnix">Why Crystalnix</a></li>
-                                        <li><a href="/#company">Company</a></li>
-                                        <li><a href="/#approach">Our approach</a></li>
-                                        <li><a href="/#clients">Our clients</a></li>
-                                        <li><a href="/#partners">Our partners</a></li>
+                                        <li><a href="index.html#crystalnix">Why Crystalnix</a></li>
+                                        <li><a href="index.html#company">Company</a></li>
+                                        <li><a href="index.html#approach">Our approach</a></li>
+                                        <li><a href="index.html#clients">Our clients</a></li>
+                                        <li><a href="index.html#partners">Our partners</a></li>
                                     </div>
                                 </ul>
                             </li>
                             <li class="dropdown">
-                                <a href="" class="dropdown-toggle" data-toggle="dropdown">
+                                <a href="services.html" class="col-xs-10 col-sm-12">
                                     Our services
-                                    <b class="caret visible-xs pull-right"></b>
-                                    <b class="caret hidden-xs"></b>
+                                    <img class="hidden-xs" src="img/menu_arrow_down.png">
                                 </a>
+                                <button class="col-xs-2 visible-xs btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown"><img src="img/menu_arrow_down.png"></button>
                                 <ul class="header_dropdown-list dropdown-menu">
                                     <div class="container">
-                                        <li><a href="/services.html#product">Product Development</a></li>
-                                        <li><a href="/services.html#bespoke">Bespoke Business Apps + Tools</a></li>
-                                        <li><a href="/services.html#post">Post Release Maintenance</a></li>
+                                        <li><a href="services.html#product">Product Development</a></li>
+                                        <li><a href="services.html#bespoke">Bespoke Business Apps + Tools</a></li>
+                                        <li><a href="services.html#post">Post Release Maintenance</a></li>
                                     </div>
                                 </ul>
                             </li>
                             <li class="dropdown">
-                                <a class="dropdown-toggle" href="/projects/">Our work</a>
+                                <a class="dropdown-toggle" href="work.html">Our work</a>
                             </li>
                             <li class="dropdown">
-                                <a class="dropdown-toggle" href="/contacts.html">Contact us</a>
+                                <a class="dropdown-toggle text-orange" href="contacts.html">Contact us</a>
                             </li>
                             <li class="dropdown">
-                                <a class="dropdown-toggle" href="/blog/">Blog</a>
+                                <a class="dropdown-toggle" href="blog.html">Blog</a>
                             </li>
                         </ul>
                     </div>
@@ -80,131 +79,93 @@
 
     <div class="content contacts">
 
-        <div class="contacts-info">
-            <div class="container">
-
-                <div id="contacts-header" class="text-center">
+        <div class="contact-us">
+            <div class="container text-center">
+                <span class="block-header">
                     Contact us
-                </div>
-
-                <div id="contacts-email" class="text-center">
-                    <div>
-                        <img id="telegram" src="img/contacts/telegram.png">
-                    </div>
-
-                    <div id="email">
-                        contacts@crystalnix.com
-                    </div>
-                </div>
-
-                <div id="offices" class="center-block">
-                    <div class="col-md-6 center-block">
-
-                        <div class="office-title">Wellington</div>
-
-                        <div class="office-subtitle">Headquarters</div>
-
-                        <img class="office-image" src="img/contacts/wellington.png">
-
-                        <div class="office-info">
-
-                            <div class="col-sm-4 col-xs-6 office-location">
-
-                                <div>
-                                    <img src="img/contacts/location.png">
-                                </div>
-
-                                <div class="office-info-text">
-                                    115 Tory St.<br>Te Aro,<br>Wellington, 6011,<br>New Zealand
-                                </div>
-
+                </span>
+                <img class="contact-us__email-logo" src="img/contacts/email.png">
+                <span class="block-text">
+                    contacts@crystalnix.com
+                </span>
+                <div class="row text-left contact-us__content">
+                    <div class="col-lg-5 col-lg-offset-1 col-sm-6 col-xs-12 text-center">
+                        <div class="contact-us_wrapper text-left">
+                            <span class="contact-us__contact-title">
+                                Wellington
+                            </span>
+                            <span class="block-text">
+                                Headquarters
+                            </span>
+                            <img class="visible-xs visible-sm contact-us__photo" src="img/contacts/wellington_mobile.png">
+                            <img class="hidden-xs hidden-sm contact-us__photo" src="img/contacts/wellington.png">
+                            <div class="col-xs-7 col-md-4 contact-us__info">
+                                <img src="img/contacts/location.png">
+                                <span class="block-text">
+                                    115 Tory St,<br>  Te Aro,<br>
+                                    Wellington, 6011, <br>
+                                    New Zealand
+                                </span>
                             </div>
-
-                            <div class="col-sm-4 col-xs-6 office-phone">
-
-                                <div>
-                                    <img src="img/contacts/phone.png">
-                                </div>
-
-                                <div class="office-info-text">
+                            <div class="col-xs-5 col-md-4 contact-us__info">
+                                <img src="img/contacts/phone.png">
+                                <span class="block-text">
                                     +64 98893020
-                                </div>
-
+                                </span>
                             </div>
-
-                            <div class="col-sm-4 col-xs-6 office-tz">
-
-                                <div>
-                                    <img src="img/contacts/timezone.png">
-                                </div>
-
-                                <div class="office-info-text">
-                                    Time zone<br>UTC/GMT +12
-                                </div>
-
+                            <div class="col-xs-7 col-md-4 contact-us__info">
+                                <img src="img/contacts/time_zone.png">
+                                <span class="block-text">
+                                    Time zone <br>
+                                    UTC/GMT +12
+                                </span>
                             </div>
                         </div>
-
                     </div>
-
-                    <div class="col-md-6">
-
-                        <div class="office-title">Omsk</div>
-
-                        <div class="office-subtitle">Development branch</div>
-
-                        <img class="office-image" src="img/contacts/omsk.png">
-
-                        <div class="office-info">
-
-                            <div class="col-sm-4 col-xs-6 office-location">
-
-                                <div>
-                                    <img src="img/contacts/location.png">
-                                </div>
-
-                                <div class="office-info-text">
-                                    Office 1001,<br>35 T.K. Shcherbaneva St<br>Omsk, 644024<br> Russian Federation
-                                </div>
-
+                    <div class="col-lg-5 col-sm-6 col-xs-12 text-center">
+                        <div class="contact-us_wrapper text-left">
+                            <span class="contact-us__contact-title">
+                                Omsk
+                            </span>
+                            <span class="block-text">
+                                Development branch
+                            </span>
+                            <img class="visible-xs visible-sm contact-us__photo" src="img/contacts/omsk_mobile.png">
+                            <img class="hidden-xs hidden-sm contact-us__photo" src="img/contacts/omsk.png">
+                            <div class="col-xs-7 col-md-4 contact-us__info">
+                                <img src="img/contacts/location.png">
+                                <span class="block-text">
+                                    Office 1001, <br>
+                                    35 T.K. <br>
+                                    Shcherbaneva St <br>
+                                    Omsk, 644024  <br>
+                                    Russian Federation
+                                </span>
                             </div>
-
-                            <div class="col-sm-4 col-xs-6 office-phone">
-
-                                <div>
-                                    <img src="img/contacts/phone.png">
-                                </div>
-
-                                <div class="office-info-text">
+                            <div class="col-xs-5 col-md-4 contact-us__info">
+                                <img src="img/contacts/phone.png">
+                                <span class="block-text">
                                     +7 9609994712
-                                </div>
-
+                                </span>
                             </div>
-
-                            <div class="col-sm-4 col-xs-6 office-tz">
-
-                                <div>
-                                    <img src="img/contacts/timezone.png">
-                                </div>
-
-                                <div class="office-info-text">
-                                    Time zone<br>UTC/GMT +7
-                                </div>
-
+                            <div class="col-xs-7 col-md-4 contact-us__info">
+                                <img src="img/contacts/time_zone.png">
+                                <span class="block-text">
+                                    Time zone <br>
+                                    UTC/GMT +7
+                                </span>
                             </div>
                         </div>
-
                     </div>
-
                 </div>
-
             </div>
-
         </div>
 
-            <div class="contacts-form container">
-                <h2 class="block-header text-center"> Got an idea?</h2>
-                <form id="contactForm" role="form" class="form-horizontal"
+        <div class="contacts-form container">
+                <span class="block-header text-center">
+                    Got an idea?
+                </span>
+                <form id="contactForm" role="form" class="form-horizontal col-lg-10 col-lg-offset-1 nopadding"
                       accept-charset="UTF-8" action="https://formkeep.com/f/9ebefe7d7261"
                       method="post" enctype="multipart/form-data">
 
@@ -212,16 +173,14 @@
 
                     <div class="form-part-one">
 
-                        <p class="text-center block-text">
-                            <b>
-                                We'd love to hear about your ideas! Introduce yourself and let us know how we
-                                can get in touch with you, then we'll grab some details about your project.
-                            </b>
-                        </p>
+                        <span class="col-md-8 col-md-offset-2 block-text text-center">
+                            We’d love to hear about your ideas! Introduce yourself and let us know how we can get in touch with you,
+                            then we’ll grab some details about your project.
+                        </span>
 
                         <div class="form-group">
                             <div class="col-sm-6">
-                                <input type="text" class="form-control" id="inputName" name="name" placeholder="Name"/>
+                                <input type="text" class="form-control" id="inputName" name="name" placeholder="Name" required/>
                             </div>
 
                             <div class="col-sm-6">
@@ -231,7 +190,7 @@
 
                         <div class="form-group">
                             <div class="col-sm-12">
-                                <input type="email" class="form-control" id="inputEmail" name="email" placeholder="Email"/>
+                                <input type="email" class="form-control" id="inputEmail" name="email" placeholder="Email" required/>
                             </div>
                         </div>
 
@@ -241,30 +200,28 @@
                                           name="message"
                                           class="form-control"
                                           id="inputMessage"
-                                          placeholder="Message"></textarea>
+                                          placeholder="Message"
+                                          required></textarea>
                             </div>
                         </div>
 
                         <div class="form-group text-center">
-                            <button id="nextButton" class="btn">NEXT</button>
+                            <button id="nextButton" type="submit" class="btn">NEXT</button>
                         </div>
 
                     </div>
 
                     <div class="form-part-two">
-                        <p class="text-center block-text">
-                            <b>
-                                Is there anything you can tell us about your project already so we can get this started?
-                                Don’t worry if you’re not sure yet, you can leave us a brief message in the next step.
-                            </b>
-                        </p>
-
-                        <div class="form-group">
-                            <div class="col-sm-6 col-xs-12">
+                        <span class="col-md-10 col-md-offset-1 block-text text-center">
+                            Is there anything you can tell us about your project already so we can get this started?
+                            Don’t worry if you’re not sure yet, you can leave us a brief message in the next step.
+                        </span>
+                       <div class="form-group">
+                            <div class="col-sm-6">
                                 <input type="text" class="form-control" id="inputBudget" name="budget" placeholder="Budget (optional)"/>
                             </div>
 
-                            <div class="col-sm-6 col-xs-12">
+                            <div class="col-sm-6">
                                 <input type="text" class="form-control" id="inputDeadline" name="phone" placeholder="Deadline (optional)"/>
                             </div>
                         </div>
@@ -279,16 +236,21 @@
                             </div>
                         </div>
 
-                        <div class="form-group text-center">
-                            or attach request for proposal (optional)
-                            <div class="fileUpload btn">
+                        <div class="form-group text-center form__attach">
+                            <span id="selected-file">or attach request for proposal (optional)</span>
+                            <div class="fileUpload btn" id="attach-btn">
                                 <span><img src="img/contacts/clip.png"> ATTACH</span>
                                 <input type="file" name="file" placeholder="ATTACH" class="form-control upload"/>
                             </div>
+                            <div class="btn" id="delete-btn">
+                                <span><img src="img/contacts/clip.png"> DELETE</span>
+                            </div>
                         </div>
 
+
+
                         <div class="form-group text-center">
-                                <button id="backButton" class="btn">BACK</button>
+                                <button id="backButton" type="button" class="btn">BACK</button>
 
                                 <button id="submitButton" type="submit" class="btn btn-success">SUBMIT</button>
                         </div>
@@ -296,6 +258,8 @@
 
                 </form>
             </div>
+
+    </div>
 
     <footer>
         <div class="container">
@@ -333,7 +297,7 @@
                             </a>
                         </li>
                     </ul>
-                    <ul class="col-md-3 col-sm-4 list-unstyled nopadding">
+                    <ul class="col-md-4 col-sm-4 list-unstyled nopadding">
                         <li class="footer__padding-bottom">
                             <a href="#">
                                 <strong>Our services</strong>
@@ -348,7 +312,7 @@
                             <a href="#">
                                 Broke Business Apps + Tools
                             </a>
-                        </li>а
+                        </li>
                         <li class="footer__padding-bottom">
                             <a href="#">
                                 Post Release Maintenance
@@ -370,7 +334,7 @@
                             </a>
                         </li>
                     </ul>
-                    <div class="footer_social-networks col-md-3 col-sm-4 col-md-offset-3">
+                    <div class="footer_social-networks col-md-3 col-sm-4 col-md-offset-2">
                         <a>
                             <img src="img/facebook.png">
                         </a>
@@ -390,8 +354,12 @@
     </footer>
 
     <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/respond.min.js"></script>
     <script src="js/html5shiv.min.js"></script>
+    <script src="js/page.navigation.js"></script>
+    <script src="js/page.contacts.form.js"></script>
+
 </body>
 </html>
