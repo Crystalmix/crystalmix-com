@@ -6,12 +6,6 @@ $(document).ready(function(){
         active_mobile_slide_name = $('.bespoke__slider__container.mobile_mode .slide-name'),
         active_cloud_slide_name = $('.bespoke__slider__container.cloud_mode .slide-name');
 
-    active_mobile_slide.show();
-    active_mobile_slide_name.text('Hybrid apps');
-
-    active_cloud_slide.show();
-    active_cloud_slide_name.text('AWS based solutions');
-
     slider_mobile.slick({
         slidesToShow: 5,
         slidesToScroll: 1,
@@ -31,6 +25,12 @@ $(document).ready(function(){
         swipeToSlide: true,
         focusOnSelect: true
     });
+
+    active_mobile_slide.show();
+    active_mobile_slide_name.text('Hybrid apps');
+
+    active_cloud_slide.show();
+    active_cloud_slide_name.text('AWS based solutions');
 
     slider_mobile.on('beforeChange', function() {
         active_mobile_slide.stop().animate({opacity: "0"}, 500);
