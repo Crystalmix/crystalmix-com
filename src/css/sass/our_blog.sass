@@ -1,0 +1,141 @@
+$screen-sm-min: 768px
+$screen-md-min: 992px
+
+$blog_background: url(../img/our_blog/blog_background.png)
+$blog_background_mobile: url(../img/our_blog/blog_background_mobile.png)
+
+.blogs
+    padding-top: 65px
+    @media (min-width: $screen-sm-min)
+        padding-top: 89px
+    .block-header
+        font-family: Monsterrat-Light
+        font-size: 36px
+        line-height: 43px
+        letter-spacing: 3.6px
+        padding-top: 40px
+        padding-bottom: 50px
+        @media (min-width: $screen-sm-min)
+            padding-top: 100px
+            padding-bottom: 60px
+            font-size: 40px
+            line-height: 48px
+            letter-spacing: 4px
+    .block-text
+        font-size: 14px
+        line-height: 22px
+        letter-spacing: 0.5px
+        font-family: Monsterrat-Light
+    .page-logo
+        background-color: #F4F5F5
+        background-image: $blog_background_mobile
+        @media (min-width: $screen-sm-min)
+            background-image: $blog_background
+        .page-logo__content
+            color: #11364D
+    .blogs-filter
+        position: relative
+        .blog-slider
+            padding-left: 30px
+            padding-right: 30px
+        .slick-slider
+            margin-bottom: 0
+        .slick-slide
+            &:hover
+                cursor: pointer
+            &:focus
+                outline: none
+        .search-icon
+            cursor: pointer
+            margin: 0 8px 0 8px
+        .clear-search
+            cursor: pointer
+        .search-input
+            padding: 0
+            height: 17px
+            border: none
+            outline: none
+            text-align: center
+            font-family: Montserrat-Light
+            font-size: 14px
+            color: #11364D
+            letter-spacing: 1.04px
+            line-height: 17px
+            &::-webkit-input-placeholder
+                color: #11364D
+            &:-moz-placeholder
+                color: #11364D
+            &:-ms-input-placeholder
+                color: #11364D
+        .dropdown
+            width: 100%
+            display: inline-block
+            padding: 0 37px
+            @media (min-width: $screen-sm-min)
+                width: auto
+                position: static
+                .dropdown-menu
+                    position: absolute !important
+            .dropdown-backdrop
+                display: none !important
+            .dropdown-menu
+                width: 100%
+                padding: 0
+                box-shadow: none
+                position: static
+                margin: 0
+                border: 0
+                border-radius: 0
+                text-align: center
+
+            .filter-elem
+                text-decoration: none
+                padding: 35px 0
+                display: block
+                font-size: 14px
+                line-height: 17px
+                letter-spacing: 1.05px
+                color: #11364D
+                font-family: Monsterrat-Regular
+                &.dropdown-toggle
+                    color: #FD5412
+    .list-articles
+        .article
+            border-bottom: 1px #ECECEC solid
+            padding-top: 45px
+            font-family: Montserrat-Light
+            color: #11364D
+            @media (min-width: $screen-sm-min)
+                padding-top: 110px
+            .title
+                font-size: 24px
+                color: #FD5412
+                letter-spacing: 1.5px
+            .author
+                font-size: 16px
+                letter-spacing: 1px
+            .summary, .tags
+                margin-top: 30px
+                font-size: 14px
+                letter-spacing: 0.5px
+            .tags
+                .tag
+                    margin-right: 10px
+                    margin-left: 10px
+                    display: inline-block
+                .sharp
+                    margin-right: 10px
+            .read-more-btn
+                outline: none
+                margin-top: 30px
+                margin-bottom: 45px
+                border: 2px solid #11364D
+                border-radius: 3px
+                font-family: Montserrat-Regular
+                font-size: 12px
+                color: #11364D
+                letter-spacing: 1.33px
+                padding: 10px 15px
+                background: white
+                @media (min-width: $screen-sm-min)
+                    margin-bottom: 100px

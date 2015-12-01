@@ -38,6 +38,10 @@ $(document).ready(function(){
         $('.blog-slider').slick('unslick');
     });
 
+    $('.blogs-filter .dropdown-menu').on('click', function (event) {
+        event.preventDefault();
+        event.stopPropagation();
+    });
 
 });
 
@@ -58,6 +62,9 @@ ngApp.filter('blogFilter', function() {
 
 ngApp.controller('blogsCtrl', function($scope) {
 
+    $scope.currentFilter = null;
+    $scope.counts = 1;
+
     var jsonParser = function(json) {
         var result = angular.copy(json);
         angular.forEach(result, function(item) {
@@ -67,6 +74,8 @@ ngApp.controller('blogsCtrl', function($scope) {
         });
         return result;
     };
+
+    $scope.newworks = jsonParser($scope.works);
 
     $scope.filters = [
         {
@@ -86,7 +95,6 @@ ngApp.controller('blogsCtrl', function($scope) {
         }
     ];
 
-    $scope.currentFilter = null;
 
     $scope.works = [
         {
@@ -127,13 +135,11 @@ ngApp.controller('blogsCtrl', function($scope) {
         }
     ];
 
-    $scope.counts = 1;
 
     $scope.pagination = function () {
         $scope.counts += 1;
     };
 
-    $scope.newworks = jsonParser($scope.works);
 
     $scope.setFilter = function(tag_name ,tag) {
         if (tag.toLowerCase() == 'all') {
@@ -145,5 +151,9 @@ ngApp.controller('blogsCtrl', function($scope) {
             }
         }
         $scope.counts = 1;
+    };
+
+    $scope.clearSearch = function () {
+        $scope.qwerty = null;
     }
 });
