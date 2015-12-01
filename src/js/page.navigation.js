@@ -1,5 +1,8 @@
 $(document).ready(function() {
 
+    var menu_btn_text = $('.header__menu-button__text'),
+        page_name = menu_btn_text.text();
+
     $('.header .dropdown-menu a').on('click', function () {
         $('.dropdown.open .dropdown-toggle').click();
         $('.navbar-collapse').collapse('hide');
@@ -24,8 +27,10 @@ $(document).ready(function() {
     });
 
     $('.collapse').on('show.bs.collapse', function() {
+        menu_btn_text.text('Menu');
         $('.overlay').fadeIn('fast');
     }).on('hide.bs.collapse', function() {
+        menu_btn_text.text(page_name);
         $('.overlay').fadeOut('fast');
     });
 
