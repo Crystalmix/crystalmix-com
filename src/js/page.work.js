@@ -1,11 +1,11 @@
 $(document).ready(function(){
 
-    var industry = $('.works-filter .dropdown'),
-        type_of_work = $('#type-of-work'),
-        year = $('#year');
+    var dropdown = $('.works-filter .dropdown'),
+        dropdown_menu = $('.works-filter .dropdown-menu'),
+        work_slider = $('.work-slider');
 
-    industry.on('shown.bs.dropdown', function() {
-        $('.work-slider').slick({
+    dropdown.on('shown.bs.dropdown', function() {
+        work_slider.slick({
             slidesToShow: 5,
             slidesToScroll: 1,
             swipeToSlide: false,
@@ -34,11 +34,11 @@ $(document).ready(function(){
         });
     });
 
-    industry.on('hide.bs.dropdown', function() {
-        $('.work-slider').slick('unslick');
+    dropdown.on('hide.bs.dropdown', function() {
+        work_slider.slick('unslick');
     });
 
-    $('.works-filter .dropdown-menu').on('click', function (event) {
+    dropdown_menu.on('click', function (event) {
         event.preventDefault();
         event.stopPropagation();
     });
