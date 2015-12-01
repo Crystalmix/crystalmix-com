@@ -43,6 +43,12 @@ $screen-lg-min: 1200px
     min-height: 0
     .navbar-collapse
         max-height: none
+        &::-webkit-scrollbar
+            display: none
+        &::-webkit-scrollbar-track
+            display: none
+        &::-webkit-scrollbar-thumb
+            display: none
     .navbar-header
         padding-top: 12px
         padding-bottom: 13px
@@ -50,13 +56,6 @@ $screen-lg-min: 1200px
             padding-top: 18px
             padding-bottom: 18px
     .navbar__list
-        @media screen and (min-width: $screen-sm-min)
-            //.dropdown:hover
-                .dropdown-menu
-                    display: block !important
-                .dropdown-toggle
-                    color: #FD5412 !important
-                cursor: pointer
         letter-spacing: 1px
         margin-top: 0
         margin-bottom: 0
