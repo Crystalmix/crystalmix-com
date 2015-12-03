@@ -2,5 +2,5 @@
 lib
 node_modules
 .DS_Store
-src/css/styles.css
 .env
+output
