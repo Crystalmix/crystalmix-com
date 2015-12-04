@@ -10,11 +10,12 @@ concat              = require 'gulp-concat'
 main_bower_files    = require 'gulp-main-bower-files'
 
 path =
-    js     : './output/theme/js'
-    coffee : './theme/crystalnix/src/coffee'
-    css    : './output/theme/css'
-    sass   : './theme/crystalnix/src/sass'
-    lib_out: './output/theme/lib'
+    js          : './output/theme/js'
+    coffee      : './theme/crystalnix/src/coffee'
+    css         : './output/theme/css'
+    sass        : './theme/crystalnix/src/sass'
+    lib_out     : './output/theme/lib'
+    bower_json  : './bower.json'
 
 name =
     js     : 'crystalnix'
@@ -27,6 +28,37 @@ options =
         newlineMaximum: 2
         indentation: "spaces"
         spaces: 4
+    libs_main_files:
+        overrides:
+            'angular':
+                'main': [
+                    'angular.min.js'
+                    'angular.min.js.map'
+                ]
+            'bootstrap':
+                'main': [
+                    'dist/css/bootstrap.min.css'
+                    'dist/css/bootstrap.min.css.map'
+                    'dist/js/bootstrap.min.js'
+                ]
+            'html5shiv':
+                'main': [
+                    'dist/html5shiv.min.js'
+                ]
+            'jquery':
+                'main': [
+                    'dist/jquery.min.js'
+                    'dist/jquery.min.js.map'
+                ]
+            'respond':
+                'main': [
+                    'dest/respond.min.js'
+                ]
+            'slick-carousel':
+                'main': [
+                    'slick/slick.min.js'
+                    'slick/slick.css'
+                ]
 
 
 # Tasks for coffee and sass compile and minify
@@ -74,41 +106,7 @@ gulp.task 'coffee-uglify', ['coffeelint'], () ->
 
 # Task for copy all bower dependencies (js and css) in output directory
 
-libs_main_files =
-    overrides:
-        'angular':
-            'main': [
-                'angular.min.js'
-                'angular.min.js.map'
-            ]
-        'bootstrap':
-            'main': [
-                'dist/css/bootstrap.min.css'
-                'dist/css/bootstrap.min.css.map'
-                'dist/js/bootstrap.min.js'
-            ]
-        'html5shiv':
-            'main': [
-                'dist/html5shiv.min.js'
-            ]
-        'jquery':
-            'main': [
-                'dist/jquery.min.js'
-                'dist/jquery.min.js.map'
-            ]
-        'respond':
-            'main': [
-                'dest/respond.min.js'
-            ]
-        'slick-carousel':
-            'main': [
-                'slick/slick.min.js'
-                'slick/slick.css'
-            ]
-
-bower_json = './bower.json'
-
 gulp.task 'main-bower-files', () ->
-    gulp.src(bower_json)
-        .pipe(main_bower_files(libs_main_files))
+    gulp.src(path.bower_json)
+        .pipe(main_bower_files(options.libs_main_files))
         .pipe(gulp.dest(path.lib_out))
