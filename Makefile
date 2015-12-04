@@ -60,6 +60,8 @@ help:
 	@echo '                                                                          '
 
 html:
+	gulp sass
+	cp -rf src/css/styles.css theme/crystalnix/static/css
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
 
 clean:

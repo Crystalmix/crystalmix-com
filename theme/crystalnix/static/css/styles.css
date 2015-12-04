@@ -1,3 +1,72 @@
+.article-content .article-header {
+  padding-top: 220px;
+  padding-bottom: 50px;
+  background-image: url(../img/article/header_article.png);
+  font-family: Montserrat-Light;
+  color: #11364D; }
+  .article-content .article-header .article-title {
+    font-size: 24px;
+    color: #FD5412;
+    letter-spacing: 1.2px; }
+  .article-content .article-header .article-author {
+    margin-top: 5px;
+    font-size: 16px;
+    letter-spacing: 0.8px; }
+  .article-content .article-header .article-tags {
+    margin-top: 80px;
+    font-size: 14px;
+    letter-spacing: 0.5px; }
+    .article-content .article-header .article-tags .tag {
+      margin-right: 10px;
+      margin-left: 10px; }
+    .article-content .article-header .article-tags .sharp {
+      margin-right: 10px; }
+
+.article-content .article-text {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  border-bottom: 1px #ECECEC solid; }
+
+.article-content .share-content {
+  border-bottom: 1px #ECECEC solid;
+  padding-top: 50px; }
+  .article-content .share-content .share-title {
+    font-size: 24px;
+    letter-spacing: 2.4px; }
+  .article-content .share-content .share-btns {
+    margin-top: 33px;
+    margin-bottom: 50px; }
+    .article-content .share-content .share-btns #touchButton {
+      text-align: center;
+      float: none;
+      margin-bottom: 20px;
+      background: #FD5412;
+      border: 2px solid #FD5412;
+      border-radius: 3px;
+      font-family: Montserrat-Regular;
+      font-size: 14px;
+      color: #FFFFFF;
+      letter-spacing: 1.55px;
+      width: 151px;
+      height: 43px; }
+      @media (min-width: 768px) {
+        .article-content .share-content .share-btns #touchButton {
+          float: right; } }
+    .article-content .share-content .share-btns #shareButton {
+      background: #FFFFFF;
+      border: 2px solid #FD5412;
+      border-radius: 3px;
+      font-family: Montserrat-Light;
+      font-size: 14px;
+      color: #FD5412;
+      letter-spacing: 1.55px;
+      line-height: 17px;
+      width: 151px;
+      height: 43px; }
+      @media (min-width: 768px) {
+        .article-content .share-content .share-btns #shareButton {
+          float: left; } }
+
 .contacts {
   padding-top: 65px; }
   @media (min-width: 768px) {
@@ -678,7 +747,9 @@ footer {
     .blogs .page-logo .page-logo__content {
       color: #11364D; }
   .blogs .blogs-filter {
-    position: relative; }
+    position: relative;
+    border-bottom: 1px #ECECEC solid;
+    border-top: 1px #ECECEC solid; }
     .blogs .blogs-filter .slick-arrow {
       background: black; }
     .blogs .blogs-filter .slick-slider {
@@ -718,6 +789,39 @@ footer {
           color: #FD5412; }
       .blogs .blogs-filter .dropdown.open a:focus {
         color: #FD5412; }
+  .blogs .list-articles .article {
+    border-bottom: 1px #ECECEC solid;
+    padding-top: 108px;
+    font-family: Montserrat-Light;
+    color: #11364D; }
+    .blogs .list-articles .article .title {
+      font-size: 24px;
+      color: #FD5412;
+      letter-spacing: 1.5px; }
+    .blogs .list-articles .article .author {
+      font-size: 16px;
+      letter-spacing: 1px; }
+    .blogs .list-articles .article .summary, .blogs .list-articles .article .tags {
+      margin-top: 30px;
+      font-size: 14px;
+      letter-spacing: 0.5px; }
+    .blogs .list-articles .article .tags .tag {
+      margin-right: 10px;
+      margin-left: 10px;
+      display: inline-block; }
+    .blogs .list-articles .article .tags .sharp {
+      margin-right: 10px; }
+    .blogs .list-articles .article .read-more-btn {
+      margin-top: 30px;
+      margin-bottom: 105px;
+      border: 2px solid #11364D;
+      border-radius: 3px;
+      font-family: Montserrat-Regular;
+      font-size: 12px;
+      color: #11364D;
+      letter-spacing: 1.33px;
+      padding: 10px 15px;
+      background: white; }
 
 .services {
   padding-top: 65px; }

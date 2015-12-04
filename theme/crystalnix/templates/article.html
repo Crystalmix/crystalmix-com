@@ -1,29 +1,81 @@
 {% extends "base.html" %}
 {% set active_page = 'blog' -%}
 {% block content %}
-  <div class="content home-page">
-      <section id="content" class="body">
-        <div>
-          <h2 class="entry-title">
-            <a href="/{{ article.url }}" rel="bookmark"
-               title="Permalink to {{ article.title|striptags }}">{{ article.title }}
-            </a>
-          </h2>
-        </div>
-        <div class="entry-content">
-          {{ article.content }}
-        </div><!-- /.entry-content -->
-        <div id="disqus_thread"></div>
-      </section>
+<div class="content article-content">
+  <div class="article-header text-center">
 
+      <div class="article-title">
+          {{ article.title }}
+      </div>
+
+      <div class="article-author">
+          By {{ article.author }}, {{ article.date.strftime('%d.%m.%Y') }}
+      </div>
+
+      <div class="article-tags">
+          <span class="sharp">#</span>
+          <span class="tag">android</span>
+          <span class="tag">hybrid</span>
+          <span class="tag">applications</span>
+          <span class="tag">ios mobile</span>
+          <span class="tag">development</span>
+          <span class="tag">xamarin</span>
+      </div>
+
+  </div>
+
+  <div class="article-text">
+      <div class="container">
+            <div class="row">
+                <div class="col-lg-offset-1 col-lg-10">
+                    {{ article.content }}
+                </div>
+            </div>
+      </div>
+  </div>
+
+  <div class="share-content">
+      <div class="container">
+            <div class="row">
+                <div class="col-lg-offset-1 col-lg-10">
+                    <div class="share-title  text-center">
+                        Like what you’ve seen?
+                    </div>
+                    <div class="row share-btns">
+                        <div class="col-sm-6 col-xs-12 text-center">
+                            <button id="touchButton" class="btn">GET IN TOUCH</button>
+                        </div>
+
+                        <div class="col-sm-6 col-xs-12 text-center">
+                            <button id="shareButton" class="btn"><span><img src="/theme/img/article/share_icon.png"> SHARE</span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+      </div>
+  </div>
+
+  <div class="blog-navigation text-center">
       {% if article.prev_article and article.prev_article.title != 'index'%}
-          <p class="prevpost"><i class="fa fa-arrow-left"></i> Older<br />
-          <a href="/{{ article.prev_article.url}}">{{ article.prev_article.title }}</a></p>
-      {% endif %}
-      {% if article.next_article and article.next_article.title != 'index'%}
-          <p class="nextpost">Newer <i class="fa fa-arrow-right"></i><br />
-          <a href="/{{ article.next_article.url}}">{{ article.next_article.title }}</a></p>
+        <a href="/{{ article.prev_article.url}}">{{ article.prev_article.title }}</a></p>
       {% endif %}
 
-    </div>
+      {% if article.next_article and article.next_article.title != 'index'%}
+      <p class="nextpost">Newer <i class="fa fa-arrow-right"></i><br />
+      <a href="/{{ article.next_article.url}}">{{ article.next_article.title }}</a></p>
+      {% endif %}
+
+  </div>
+
+  {% if article.prev_article and article.prev_article.title != 'index'%}
+      <p class="prevpost"><i class="fa fa-arrow-left"></i> Older<br />
+      <a href="/{{ article.prev_article.url}}">{{ article.prev_article.title }}</a></p>
+  {% endif %}
+  {% if article.next_article and article.next_article.title != 'index'%}
+      <p class="nextpost">Newer <i class="fa fa-arrow-right"></i><br />
+      <a href="/{{ article.next_article.url}}">{{ article.next_article.title }}</a></p>
+  {% endif %}
+
+</div>
+
 {% endblock %}
