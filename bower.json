@@ -1,11 +1,13 @@
 {
-  "name": "crystalnix",
-  "version": "1.0.0",
-  "devDependencies": {
-    "bootstrap": "~3.3.5",
-    "respond": "~1.4.2",
-    "html5shiv": "~3.7.3",
-    "slick-carousel": "~1.5.8",
-    "angular": "~1.4.8"
-  }
+    "name": "crystalnix",
+    "version": "1.0.0",
+    "devDependencies": {
+    },
+    "dependencies": {
+        "bootstrap": "~3.3.5",
+        "respond": "~1.4.2",
+        "html5shiv": "~3.7.3",
+        "slick-carousel": "~1.5.8",
+        "angular": "~1.4.8"
+    }
 }
