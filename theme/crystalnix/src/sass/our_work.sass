@@ -1,0 +1,158 @@
+$screen-sm-min: 768px
+$screen-md-min: 992px
+
+$work_background: url(../img/our_work/work_background.png)
+$work_background_mobile: url(../img/our_work/work_background_mobile.png)
+
+.works
+    padding-top: 65px
+    @media (min-width: $screen-sm-min)
+        padding-top: 89px
+    .block-header
+        font-family: Monsterrat-Light
+        font-size: 36px
+        line-height: 43px
+        letter-spacing: 3.6px
+        padding-top: 40px
+        padding-bottom: 50px
+        @media (min-width: $screen-sm-min)
+            padding-top: 100px
+            padding-bottom: 60px
+            font-size: 40px
+            line-height: 48px
+            letter-spacing: 4px
+    .block-text
+        font-size: 14px
+        line-height: 22px
+        letter-spacing: 0.5px
+        font-family: Monsterrat-Light
+
+    .page-logo
+        background-color: #11364D
+        background-image: $work_background_mobile
+        @media (min-width: $screen-sm-min)
+            background-image: $work_background
+    .works-filter
+        position: relative
+        .work-slider
+            padding-left: 30px
+            padding-right: 30px
+        .dropdown
+            width: 100%
+            display: inline-block
+            padding: 0
+            .dropdown-backdrop
+                display: none !important
+            @media (min-width: $screen-sm-min)
+                width: auto
+                position: static
+                padding: 0 37px
+                .dropdown-menu
+                    position: absolute !important
+            .dropdown-menu
+                width: 100%
+                box-shadow: none
+                position: static
+                margin: 0
+                border: 0
+                border-radius: 0
+                text-align: center
+
+            .filter-elem
+                cursor: pointer
+                outline: none
+                z-index: 100
+                color: #11364D
+                text-decoration: none
+                padding: 35px 0
+                display: block
+                font-size: 14px
+                line-height: 17px
+                letter-spacing: 1.05px
+                font-family: Monsterrat-Regular
+                &.dropdown-toggle
+                    color: #FD5412
+            &.open
+                a:focus
+                    color: #FD5412
+
+    .work-background
+        background: #F4F5F5
+    .works__work
+        padding-top: 30px
+        padding-bottom: 30px
+        @media (min-width: $screen-sm-min)
+            height: 730px
+        .works__work__content
+            max-width: 350px
+            @media (min-width: $screen-sm-min)
+                max-width: none
+                height: 100%
+                position: relative
+        .works__work__image
+            padding-bottom: 30px
+            @media (min-width: $screen-sm-min)
+                padding-bottom: 0
+                position: absolute
+                left: 0
+                top: 50%
+                transform: translateY(-50%)
+                img
+                    max-height: none
+            img
+                width: 100%
+                max-width: 645px
+        .works__work__descripton__btn
+            padding: 0
+            @media (min-width: $screen-sm-min)
+                padding: 0 15px 0 15px
+        .works__work__descripton
+            @media (min-width: $screen-sm-min)
+                position: absolute
+                right: 0
+                top: 50%
+                transform: translateY(-50%)
+            span
+                display: block
+            button
+                    width: 143px
+                    height: 40px
+                    color: white
+                    border: 0
+                    background: #FD5412
+                    font-size: 12px
+                    font-family: Monsterrat-Regular
+                    letter-spacing: 1px
+                    &:focus
+                        outline: none
+                    @media (min-width: $screen-sm-min)
+                        width: 198px
+                        height: 44px
+                        font-size: 16px
+                        letter-spacing: 1.33px
+            .works__work__title
+                font-family: Monsterrat-Light
+                font-size: 36px
+                color: #FD5412
+                letter-spacing: 3.59px
+                line-height: 43px
+                @media (min-width: $screen-sm-min)
+                    font-size: 40px
+                    color: #FD5412
+                    letter-spacing: 4px
+                    line-height: 48px
+            .works__work__year
+                font-family: Monsterrat-Light
+                font-size: 20px
+                color: #11364D
+                letter-spacing: 1.25px
+                line-height: 24px
+                padding-bottom: 28px
+            .works__work__type-of-work
+                font-family: Monsterrat-Regular
+                font-size: 14px
+                color: #11364D
+                line-height: 26px
+                letter-spacing: 0
+            .works__work__descripton__icons
+                padding-top: 28px

@@ -61,7 +61,8 @@ help:
 
 html:
 	gulp sass
-	cp -rf src/css/styles.css theme/crystalnix/static/css
+	gulp coffee
+	gulp main-bower-files
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
 
 clean:

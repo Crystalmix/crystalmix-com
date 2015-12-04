@@ -1,26 +1,12 @@
 {% extends "base.html" %}
 {% set active_page = 'projects' -%}
 {% block content %}
-  <section id="content">
-        {% block content_title %}
-        {% endblock %}
+{% endblock %}
 
-        {% for i in pages %}
-            <article class="container">
-                  <div> <h2 class="entry-title"><a href="/{{ i.url }}" rel="bookmark" title="Permalink to {{ i.title|striptags }}">{{ i.title }}</a></h2> </div>
-                  <div class="year">{{i.date.strftime('%Y')}}</div>
-                  <div class="entry-content">
-                    {{ i.summary }} <a href="/{{ i.url }}" class="continue-reading">READ MORE</a>
-                  </div>
-
-                  <div class="tags">
-                      # {% for tag in i.tags %} {{ tag }} {% endfor %}
-                  </div>
-                  <!-- /.entry-content -->
-            </article>
-        {% endfor %}
-
-        <div style="clear: both;"></div>
-            <br>
-      </section><!-- /#content -->
+{% block scripts %}
+    {{ super() }}
+    <script src="js/angular.min.js"></script>
+    <script src="js/page.navigation.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/page.work.js"></script>
 {% endblock %}

@@ -1,46 +1,12 @@
 {% extends "base.html" %}
 {% set active_page = 'blog' -%}
 {% block content %}
-  <div class="content home-page">
-      <section id="content">
-        {% for i in articles %}
-        <article class="container">
-          <div> <h2 class="entry-title"><a href="/{{ i.url }}" rel="bookmark" title="Permalink to {{ i.title|striptags }}">{{ i.title }}</a></h2> </div>
-          <div class="author">By {{i.author}}, {{i.date.strftime('%d.%m.%Y')}}</div>
-          <div class="entry-content">
-            {{ i.summary }} <a href="/{{ i.url }}" class="continue-reading">READ MORE</a>
-          </div>
-
-          <div class="tags">
-              # {% for tag in i.tags %} {{ tag }} {% endfor %}
-          </div>
-          <!-- /.entry-content -->
-        </article>
-        {% endfor %}
-
-        <div style="clear: both;"></div>
-        <div class="center-block">
-            <table>
-                <tbody>
-                    <tr>
-                        <td>
-                            {% for tag in tags|map(attribute=0)|sort(attribute='articles_counter', reverse=true) %}
-                                {{tag.name}} ({{tag.articles_counter}})
-                                <br>
-                            {% endfor %}
-                        </td>
-                        <td>
-                            {% for author in authors|map(attribute=0)|sort(attribute='articles_counter', reverse=true) %}
-                                {{author.name}} ({{author.articles_counter}})
-                                <br>
-                            {% endfor %}
-                        </td>
-                    </tr>
-
-                </tbody>
-            </table>
-        </div>
-      </section><!-- /#content -->
-    </div>
 {% endblock %}
 
+{% block scripts %}
+    {{ super() }}
+    <script src="js/angular.min.js"></script>
+    <script src="js/page.navigation.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/page.blog.js"></script>
+{% endblock %}

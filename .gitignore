@@ -1,13 +1,10 @@
 .idea
 
 lib
-
 node_modules
 
 .DS_Store
 
-styles/css
-src/css/styles.css
 
 .env
 
@@ -19,5 +16,3 @@ cache/
 
 srv.pid
 pelican.pid
-
-local_settings.py

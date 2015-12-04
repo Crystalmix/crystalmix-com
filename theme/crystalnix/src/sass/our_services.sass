@@ -1,0 +1,385 @@
+$screen-sm-min: 768px
+$screen-md-min: 992px
+
+$services_background: url(../img/our_services/services_background.png)
+$services_background_mobile: url(../img/our_services/services_background_mobile.png)
+
+
+.services
+    padding-top: 65px
+    @media (min-width: $screen-sm-min)
+        padding-top: 89px
+    .block-header
+        font-family: Monsterrat-Light
+        font-size: 36px
+        line-height: 43px
+        letter-spacing: 3.6px
+        padding-top: 40px
+        padding-bottom: 50px
+        @media (min-width: $screen-sm-min)
+            padding-top: 100px
+            padding-bottom: 60px
+            font-size: 40px
+            line-height: 48px
+            letter-spacing: 4px
+    .block-text
+        font-size: 14px
+        line-height: 22px
+        letter-spacing: 0.5px
+        font-family: Monsterrat-Light
+
+    .page-logo
+        background-color: #FD5412
+        background-image: $services_background_mobile
+        @media (min-width: $screen-sm-min)
+            background-image: $services_background
+
+    .product
+        background: #F4F5F5
+        .block-text
+            padding-left: 15px
+            padding-right: 15px
+        span
+            display: block
+        .block-header_second
+            font-family: Monsterrat-Light
+            font-size: 20px
+            line-height: 26px
+            letter-spacing: 0.83px
+            padding-bottom: 45px
+            @media (min-width: $screen-sm-min)
+                font-size: 24px
+                line-height: 29px
+                letter-spacing: 1.8px
+                padding-bottom: 55px
+        .product__content
+            margin: 0
+            padding-top: 43px
+            padding-bottom: 10px
+            @media (min-width: $screen-sm-min)
+                padding-top: 73px
+                padding-bottom: 40px
+            .product__content__wrapper
+                padding: 0
+            .product__content__block
+                padding-bottom: 54px
+                .block-text
+                    padding: 0
+                .product__content__block__title
+                    padding-bottom: 26px
+                    padding-top: 26px
+                    font-family: Montserrat-Hairline
+                    color: #FD5412
+                    font-size: 24px
+                    line-height: 26px
+                    letter-spacing: 0
+
+    .post
+        background: #F4F5F5
+        .block-text
+            padding-left: 15px
+            padding-right: 15px
+        span
+            display: block
+        .block-header_second
+            font-family: Monsterrat-Light
+            font-size: 20px
+            line-height: 26px
+            letter-spacing: 0.83px
+            padding-bottom: 45px
+            @media (min-width: $screen-sm-min)
+                font-size: 24px
+                line-height: 29px
+                letter-spacing: 1.8px
+                padding-bottom: 55px
+        .post__content
+            margin: 0
+            padding-bottom: 10px
+            @media (min-width: $screen-sm-min)
+                padding-bottom: 40px
+            .post__content__block
+                padding-bottom: 54px
+                .block-text
+                    padding: 0
+                .post__content__block__title
+                    padding-bottom: 26px
+                    padding-top: 26px
+                    font-family: Montserrat-Hairline
+                    color: #FD5412
+                    font-size: 24px
+                    line-height: 26px
+                    letter-spacing: 0
+
+    .bespoke
+        .block-header
+            display: block
+        .block-text
+            display: block
+        .slick-slider
+            margin: 0
+        .slick-slide:hover
+            cursor: pointer
+        .cloud__header
+            color: #FD5412
+        @media (min-width: $screen-md-min)
+            .slide
+                height: 100px
+                position: relative
+        #internet, #business, #solutions, #migration
+            .row
+                margin: 0
+        @media (min-width: $screen-md-min)
+            #business
+                .bespoke__list
+                    &.bespoke__list_left-padding
+                        padding-left: 40px
+        #hybrid, #websites, #internet, #business, #social, #solutions, #continuous, #migration
+            display: none
+        .bespoke__list
+            margin: 0
+            padding-right: 0
+            padding-left: 20px
+            list-style-type: disc
+            li
+                padding-top: 22px
+                font-size: 20px
+        .bespoke__list-text
+            display: block
+            font-family: Monsterrat-Light
+            font-size: 12px
+            line-height: 22px
+            letter-spacing: 0.4px
+            .bespoke__list-pointer
+                position: absolute
+                font-size: 40px
+                line-height: 22px
+        #migration
+            .bespoke__list-text
+                padding-right: 15px
+        .bespoke__slider
+            padding-bottom: 40px
+            @media (min-width: $screen-sm-min)
+                padding-bottom: 100px
+            .slide
+                &:focus
+                    outline: none
+            .block-header
+                padding-top: 0
+                font-size: 24px
+                line-height: 26px
+                letter-spacing: 1px
+                padding-bottom: 61px
+                @media (min-width: $screen-sm-min)
+                    font-size: 24px
+                    line-height: 29px
+                    letter-spacing: 2.4px
+                    padding-bottom: 93px
+            .bespoke__slider__container
+                img
+                    padding-top: 20px
+                &.mobile_mode
+                    .bespoke__slider__content
+                        background: #FD5412
+                &.cloud_mode
+                    .bespoke__slider__content
+                        background: #11364D
+            .bespoke__slider__content
+                color: white
+                margin-top: -2px
+                border-radius: 5px
+                padding: 30px 15px 30px 15px
+                @media (min-width: $screen-sm-min)
+                    padding: 50px 100px 50px 100px
+            .slide-text
+                position: absolute
+                display: block
+                width: 100%
+                text-align: center
+                top: 70px
+                font-family: Monsterrat-Light
+                font-size: 14px
+                line-height: 26px
+                letter-spacing: 0.78px
+            .slide-name
+                display: block
+                text-align: center
+                padding-top: 10px
+                font-family: Monsterrat-Light
+                font-size: 14px
+                line-height: 26px
+                letter-spacing: 0.78px
+            .slider-mobile
+                .slide-image
+                    margin: auto
+                    background: url(../img/our_services/bespoke/m_slider_mobile.png) no-repeat top left
+                .slide-0
+                    .slide-image
+                        background-position: 0 -125px
+                        width: 32px
+                        height: 35px
+                    &.slick-center
+                        .slide-image
+                            background-position: 0 -80px
+                            width: 32px
+                            height: 35px
+                .slide-1
+                    .slide-image
+                        background-position: 0 -372px
+                        width: 35px
+                        height: 30px
+                    &.slick-center
+                        .slide-image
+                            background-position: 0 -332px
+                            width: 35px
+                            height: 30px
+                .slide-2
+                    .slide-image
+                        background-position: 0 -291px
+                        width: 24px
+                        height: 31px
+                    &.slick-center
+                        .slide-image
+                            background-position: 0 -251px
+                            width: 24px
+                            height: 30px
+                .slide-3
+                    .slide-image
+                        background-position: 0 -210px
+                        width: 25px
+                        height: 31px
+                    &.slick-center
+                        .slide-image
+                            background-position: 0 -170px
+                            width: 25px
+                .slide-4
+                    .slide-image
+                        background-position: 0 -40px
+                        width: 38px
+                        height: 30px
+                    &.slick-center
+                        .slide-image
+                            background-position: 0 0
+                            width: 37px
+                            height: 30px
+                @media (min-width: $screen-sm-min)
+                    .slide-image
+                        margin: auto
+                        background: url(../img/our_services/bespoke/m_slider.png) no-repeat top left
+                    .slide-0
+                        .slide-image
+                            background-position: 0 -192px
+                            width: 54px
+                            height: 60px
+                        &.slick-center
+                            .slide-image
+                                background-position: 0 -122px
+                                width: 54px
+                                height: 60px
+                    .slide-1
+                        .slide-image
+                            background-position: 0 -564px
+                            width: 58px
+                            height: 50px
+                        &.slick-center
+                            .slide-image
+                                background-position: 0 -504px
+                                width: 58px
+                                height: 50px
+                    .slide-2
+                        .slide-image
+                            background-position: 0 -444px
+                            width: 39px
+                            height: 50px
+                        &.slick-center
+                            .slide-image
+                                background-position: 0 -384px
+                                width: 39px
+                                height: 50px
+                    .slide-3
+                        .slide-image
+                            background-position: 0 -323px
+                            width: 41px
+                            height: 51px
+                        &.slick-center
+                            .slide-image
+                                background-position: 0 -262px
+                                width: 41px
+                                height: 51px
+                    .slide-4
+                        .slide-image
+                            background-position: 0 -61px
+                            width: 62px
+                            height: 51px
+                        &.slick-center
+                            .slide-image
+                                background-position: 0 0
+                                width: 62px
+                                height: 51px
+            .slider-cloud
+                .slide-image
+                    margin: auto
+                    background: url(../img/our_services/bespoke/c_slider_mobile.png) no-repeat top left
+                .slide-0
+                    .slide-image
+                        background-position: 0 -192px
+                        height: 30px
+                        width: 38px
+                    &.slick-center
+                        .slide-image
+                            background-position: 0 -152px
+                            height: 30px
+                            width: 38px
+                .slide-1
+                    .slide-image
+                        background-position: 0 -43px
+                        width: 50px
+                        height: 33px
+                    &.slick-center
+                        .slide-image
+                            background-position: 0 0
+                            width: 50px
+                            height: 33px
+                .slide-2
+                    .slide-image
+                        background-position: 0 -119px
+                        width: 85px
+                        height: 23px
+                    &.slick-center
+                        .slide-image
+                            background-position: 0 -86px
+                            width: 85px
+                            height: 23px
+                @media (min-width: $screen-sm-min)
+                    .slide-image
+                        margin: auto
+                        background: url(../img/our_services/bespoke/c_slider.png) no-repeat top left
+                    .slide-0
+                        .slide-image
+                            background-position: 0 -169px
+                            width: 139px
+                            height: 39px
+                        &.slick-center
+                            .slide-image
+                                background-position: 0 -120px
+                                width: 139px
+                                height: 39px
+                    .slide-1
+                        .slide-image
+                            background-position: 0 -281px
+                            width: 66px
+                            height: 53px
+                        &.slick-center
+                            .slide-image
+                                background-position: 0 -218px
+                                width: 66px
+                                height: 53px
+                    .slide-2
+                        .slide-image
+                            background-position: 0 -60px
+                            width: 77px
+                            height: 50px
+                        &.slick-center
+                            .slide-image
+                                background-position: 0 0
+                                width: 77px
+                                height: 50px
