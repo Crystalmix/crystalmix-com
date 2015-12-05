@@ -8,7 +8,7 @@
                 <span class="block-header">
                     Contact us
                 </span>
-                <img class="contact-us__email-logo" src="/theme/img/contacts/email.png">
+                <img class="contact-us__email-logo" src="{{URL.IMG}}/contacts/email.png">
                 <span class="block-text">
                     contacts@crystalnix.com
                 </span>
@@ -21,10 +21,10 @@
                             <span class="block-text">
                                 Headquarters
                             </span>
-                            <img class="visible-xs visible-sm contact-us__photo" src="/theme/img/contacts/wellington_mobile.png">
-                            <img class="hidden-xs hidden-sm contact-us__photo" src="/theme/img/contacts/wellington.png">
+                            <img class="visible-xs visible-sm contact-us__photo" src="{{URL.IMG}}/contacts/wellington_mobile.png">
+                            <img class="hidden-xs hidden-sm contact-us__photo" src="{{URL.IMG}}/contacts/wellington.png">
                             <div class="col-xs-7 col-md-4 contact-us__info">
-                                <img src="/theme/img/contacts/location.png">
+                                <img src="{{URL.IMG}}/contacts/location.png">
                                 <span class="block-text">
                                     115 Tory St,<br>  Te Aro,<br>
                                     Wellington, 6011, <br>
@@ -32,13 +32,13 @@
                                 </span>
                             </div>
                             <div class="col-xs-5 col-md-4 contact-us__info">
-                                <img src="/theme/img/contacts/phone.png">
+                                <img src="{{URL.IMG}}/contacts/phone.png">
                                 <span class="block-text">
                                     +64 98893020
                                 </span>
                             </div>
                             <div class="col-xs-7 col-md-4 contact-us__info">
-                                <img src="/theme/img/contacts/time_zone.png">
+                                <img src="{{URL.IMG}}/contacts/time_zone.png">
                                 <span class="block-text">
                                     Time zone <br>
                                     UTC/GMT +12
@@ -54,10 +54,10 @@
                             <span class="block-text">
                                 Development branch
                             </span>
-                            <img class="visible-xs visible-sm contact-us__photo" src="/theme/img/contacts/omsk_mobile.png">
-                            <img class="hidden-xs hidden-sm contact-us__photo" src="/theme/img/contacts/omsk.png">
+                            <img class="visible-xs visible-sm contact-us__photo" src="{{URL.IMG}}/contacts/omsk_mobile.png">
+                            <img class="hidden-xs hidden-sm contact-us__photo" src="{{URL.IMG}}/contacts/omsk.png">
                             <div class="col-xs-7 col-md-4 contact-us__info">
-                                <img src="/theme/img/contacts/location.png">
+                                <img src="{{URL.IMG}}/contacts/location.png">
                                 <span class="block-text">
                                     Office 1001, <br>
                                     35 T.K. <br>
@@ -67,13 +67,13 @@
                                 </span>
                             </div>
                             <div class="col-xs-5 col-md-4 contact-us__info">
-                                <img src="/theme/img/contacts/phone.png">
+                                <img src="{{URL.IMG}}/contacts/phone.png">
                                 <span class="block-text">
                                     +7 9609994712
                                 </span>
                             </div>
                             <div class="col-xs-7 col-md-4 contact-us__info">
-                                <img src="/theme/img/contacts/time_zone.png">
+                                <img src="{{URL.IMG}}/contacts/time_zone.png">
                                 <span class="block-text">
                                     Time zone <br>
                                     UTC/GMT +7
@@ -163,11 +163,11 @@
                         <div class="form-group text-center form__attach">
                             <span id="selected-file">or attach request for proposal (optional)</span>
                             <div class="fileUpload btn" id="attach-btn">
-                                <span><img src="/theme/img/contacts/clip.png"> ATTACH</span>
+                                <span><img src="{{URL.IMG}}/contacts/clip.png"> ATTACH</span>
                                 <input type="file" name="file" placeholder="ATTACH" class="form-control upload" multiple/>
                             </div>
                             <div class="btn" id="delete-btn">
-                                <span><img src="/theme/img/contacts/clip.png"> DELETE</span>
+                                <span><img src="{{URL.IMG}}/contacts/clip.png"> DELETE</span>
                             </div>
                         </div>
 
@@ -188,6 +188,5 @@
 
 {% block scripts %}
     {{ super() }}
-    <script src="/theme/js/jquery.validate.min.js"></script>
-    <script src="/theme/js/page.contacts.form.js"></script>
+    <script src="{{URL.JS}}/page.contacts.js"></script>
 {% endblock %}

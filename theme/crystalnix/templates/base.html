@@ -6,10 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{% block title %}{{ SITENAME }}{% endblock title %}</title>
-    <link rel="icon" href="/theme/img/favicon.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="/theme/img/favicon.ico" />
-    <link href="/theme/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="/theme/css/styles.css" />
+    <link rel="icon" href="{{URL.IMG}}/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="{{URL.IMG}}/favicon.ico" />
+    <link href="{{URL.CDN}}/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{URL.CSS}}/styles.css" />
     {% endblock head %}
 </head>
 
@@ -20,15 +20,21 @@
             <div class="row">
                 <div class="navbar-header col-lg-3 col-md-3 col-sm-1">
                     <a href="/">
-                        <img class="hidden-xs" src="/theme/img/logo.png" alt="logo">
-                        <img class="visible-xs pull-left" src="/theme/img/logo_mobile.png" alt="logo">
+                        <img class="hidden-xs" src="{{URL.IMG}}/logo.png" alt="logo">
+                        <img class="visible-xs pull-left" src="{{URL.IMG}}/logo_mobile.png" alt="logo">
                         <span class="header__logo_text hidden-xs hidden-sm">
                             CRYSTALNIX
                         </span>
                     </a>
                     <button type="button" class="header__menu-button navbar-toggle collapsed" data-toggle="collapse" data-target="#responsive-navbar">
-                        Menu
-                        <img src="/theme/img/menu_arrow_up.png">
+                        <span class="header__menu-button__text">
+                            {% if active_page == 'index' %}Who we are{% endif %}
+                            {% if active_page == 'services' %}Our services{% endif %}
+                            {% if active_page == 'works' %}Our work{% endif %}
+                            {% if active_page == 'contacts' %}Contact us{% endif %}
+                            {% if active_page == 'blogs' %}Blog{% endif %}
+                        </span>
+                        <img src="{{URL.IMG}}/menu_arrow_up.png">
                     </button>
                 </div>
                 <div class="header_top_shadow col-lg-9 col-md-9 col-sm-11">
@@ -37,9 +43,9 @@
                             <li class="dropdown">
                                 <a href="/" class="col-xs-10 col-sm-12 {% if active_page == 'index' %}text-orange{% endif %}">
                                     Who we are
-                                    <img class="hidden-xs" src="/theme/img/menu{% if active_page == 'index' %}_active{% endif %}_arrow_down.png">
+                                    <img class="hidden-xs" src="{{URL.IMG}}/menu{% if active_page == 'index' %}_active{% endif %}_arrow_down.png">
                                 </a>
-                                <button class="col-xs-2 visible-xs btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown"><img src="/theme/img/menu_arrow_down.png"></button>
+                                <button class="col-xs-2 visible-xs btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown"><img src="{{URL.IMG}}/menu_arrow_down.png"></button>
                                 <ul class="header_dropdown-list dropdown-menu">
                                     <div class="container">
                                         <li><a href="/#crystalnix">Why Crystalnix</a></li>
@@ -51,27 +57,27 @@
                                 </ul>
                             </li>
                             <li class="dropdown">
-                                <a href="/services.html" class="col-xs-10 col-sm-12 {% if active_page == 'services' %}text-orange{% endif %}">
+                                <a href="/services/" class="col-xs-10 col-sm-12 {% if active_page == 'services' %}text-orange{% endif %}">
                                     Our services
-                                    <img class="hidden-xs" src="/theme/img/menu{% if active_page == 'services' %}_active{% endif %}_arrow_down.png">
+                                    <img class="hidden-xs" src="{{URL.IMG}}/menu{% if active_page == 'services' %}_active{% endif %}_arrow_down.png">
                                 </a>
-                                <button class="col-xs-2 visible-xs btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown"><img src="/theme/img/menu_arrow_down.png"></button>
+                                <button class="col-xs-2 visible-xs btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown"><img src="{{URL.IMG}}/menu_arrow_down.png"></button>
                                 <ul class="header_dropdown-list dropdown-menu">
                                     <div class="container">
-                                        <li><a href="/services.html#product">Product Development</a></li>
-                                        <li><a href="/services.html#bespoke">Bespoke Business Apps + Tools</a></li>
-                                        <li><a href="/services.html#post">Post Release Maintenance</a></li>
+                                        <li><a href="/services/#product">Product Development</a></li>
+                                        <li><a href="/services/#bespoke">Bespoke Business Apps + Tools</a></li>
+                                        <li><a href="/services/#post">Post Release Maintenance</a></li>
                                     </div>
                                 </ul>
                             </li>
                             <li class="dropdown">
-                                <a class="dropdown-toggle {% if active_page == 'projects' %}text-orange{% endif %}" href="/projects/">Our work</a>
+                                <a class="dropdown-toggle {% if active_page == 'works' %}text-orange{% endif %}" href="/works/">Our work</a>
                             </li>
                             <li class="dropdown">
-                                <a class="dropdown-toggle {% if active_page == 'contacts' %}text-orange{% endif %}" href="/contacts.html">Contact us</a>
+                                <a class="dropdown-toggle {% if active_page == 'contacts' %}text-orange{% endif %}" href="/contacts/">Contact us</a>
                             </li>
                             <li class="dropdown">
-                                <a class="dropdown-toggle {% if active_page == 'blog' %}text-orange{% endif %}" href="/blog/">Blog</a>
+                                <a class="dropdown-toggle {% if active_page == 'blogs' %}text-orange{% endif %}" href="/blogs/">Blog</a>
                             </li>
                         </ul>
                     </div>
@@ -160,13 +166,13 @@
                     </ul>
                     <div class="footer_social-networks col-md-3 col-sm-4 col-md-offset-2">
                         <a>
-                            <img src="/theme/img/facebook.png">
+                            <img src="{{URL.IMG}}/facebook.png">
                         </a>
                         <a>
-                            <img src="/theme/img/fill.png">
+                            <img src="{{URL.IMG}}/fill.png">
                         </a>
                         <a>
-                            <img src="/theme/img/twitter.png">
+                            <img src="{{URL.IMG}}/twitter.png">
                         </a>
                     </div>
                 </div>
@@ -178,11 +184,11 @@
     </footer>
 
 {% block scripts %}
-    <script src="/theme/js/jquery.min.js"></script>
-    <script src="/theme/js/bootstrap.min.js"></script>
-    <script src="/theme/js/respond.min.js"></script>
-    <script src="/theme/js/html5shiv.min.js"></script>
-    <script src="/theme/js/page.navigation.js"></script>
+    <script src="{{URL.CDN}}/jquery/2.1.4/jquery.min.js"></script>
+    <script src="{{URL.CDN}}/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="{{URL.CDN}}/respond/1.4.2/respond.min.js"></script>
+    <script src="{{URL.CDN}}/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="{{URL.JS}}/page.navigation.js"></script>
 {% endblock %}
 </body>
 </html>
