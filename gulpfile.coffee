@@ -7,7 +7,6 @@ rename              = require 'gulp-rename'
 lintspaces          = require 'gulp-lintspaces'
 coffeelint          = require 'gulp-coffeelint'
 concat              = require 'gulp-concat'
-cmq                 = require 'gulp-combine-media-queries'
 minifycss           = require 'gulp-minify-css'
 
 path =
@@ -53,7 +52,6 @@ gulp.task 'sass', ['lintspaces'],() ->
     gulp.src("#{path.sass}/**/*.sass")
         .pipe(concat("#{name.css}.sass"))
         .pipe(sass().on('error', sass.logError))
-        .pipe(cmq(log: true))
         .pipe(minifycss({compatibility: 'ie8'}))
         .pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest(path.css))

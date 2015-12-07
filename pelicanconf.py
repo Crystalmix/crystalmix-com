@@ -41,9 +41,9 @@ DEFAULT_DATE_FORMAT = '%a %d %B %Y'
 
 SUMMARY_MAX_LENGTH = 50
 
-BLOG_URL = "/blogs/"
-ARTICLE_URL = 'blogs/{slug}.html'
-ARTICLE_SAVE_AS = 'blogs/{slug}.html'
+BLOG_URL = "/blog/"
+ARTICLE_URL = 'blog/{slug}.html'
+ARTICLE_SAVE_AS = 'blog/{slug}.html'
 
 WORKS_URL = "/works/"
 PAGE_URL = 'works/{slug}.html'
@@ -64,25 +64,25 @@ AUTHOR_SAVE_AS = ''
 ARCHIVES_SAVE_AS = ''
 
 TEMPLATE_PAGES = {
-    "services.html"     : "services/index.html",
-    "contacts.html"     : "contacts/index.html",
-    "works.html"        : "works/index.html",
-    "work.template"     : "works/works.json",
-    "blogs.html"        : "blogs/index.html",
-    "blog.template"     : "blogs/blogs.json"
+    "services.html": "services/index.html",
+    "contacts.html": "contacts/index.html",
+    "works.html": "works/index.html",
+    "works.template": "works/works.json",
+    "blog.html": "blog/index.html",
+    "blog.template": "blog/blog.json"
 }
 
 LOAD_CONTENT_CACHE = False
 
 PLUGIN_PATHS = ['./pelican-plugins']
-PLUGINS = ['neighbors', 'articles_counter']
+PLUGINS = ['neighbors', 'articles_counter', 'related_posts_by_tags']
 
 SIMPLE_FORM_TOKEN = "0c0c9b03a05373c1dd541ebfae44dcbb"
 
 URL = {
-    "CDN"   : "https://cdn.jsdelivr.net",
-    "IMG"   : "/theme/img",
-    "CSS"   : "/theme/css",
-    "JS"    : "/theme/js",
-    "FONTS" : "/theme/fonts"
+    "CDN": "https://cdn.jsdelivr.net",
+    "IMG": "/theme/img",
+    "CSS": "/theme/css",
+    "JS": "/theme/js",
+    "FONTS": "/theme/fonts"
 }

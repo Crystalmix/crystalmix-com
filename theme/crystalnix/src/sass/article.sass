@@ -68,3 +68,79 @@ $screen-md-min: 992px
                 height: 43px
     .blog-navigation
         padding-top: 50px
+        padding-bottom: 50px
+        border-bottom: 1px #ECECEC solid
+        #left-arrow, #right-arrow, #list-articles
+            width: 27px
+            height: 27px
+            margin-left: 10px
+            margin-right: 10px
+            @media (min-width: $screen-sm-min)
+                margin-left: 25px
+                margin-right: 25px
+        #left-arrow
+            display: inline-block
+        #list-articles
+            display: inline-block
+        #right-arrow
+            display: inline-block
+    .related-articles
+        padding-top: 50px
+        border-bottom: 1px #ECECEC solid
+        .related-articles-header
+            margin-bottom: 50px
+            font-family: Montserrat-Light
+            font-size: 24px
+            color: #FD5412
+            letter-spacing: 1.2px
+        .related-articles-list
+            .related-article
+                @media (min-width: $screen-sm-min)
+                    padding-right: 50px
+                .related-article-title
+                    font-family: Montserrat-Regular
+                    @media (min-width: $screen-sm-min)
+                        height: 7em
+                        overflow: hidden
+                        text-overflow: ellipsis
+                    font-size: 18px
+                    color: #11364D
+                    letter-spacing: 1px
+                    margin-bottom: 23px
+                .related-article-author
+                    font-family: Montserrat-Light
+                    font-size: 14px
+                    color: #11364D
+                    letter-spacing: 0.5px
+                    margin-bottom: 23px
+                .read-more-btn
+                    border: 2px solid #11364D
+                    border-radius: 3px
+                    background: white
+                    font-family: Montserrat-Regular
+                    font-size: 12px
+                    color: #11364D
+                    letter-spacing: 1.33px
+                    line-height: 14px
+                    margin-bottom: 50px
+    .popular
+        background: #F4F5F5
+        border-bottom: 1px solid #F4F5F5
+        padding-top: 114px
+        font-family: Montserrat-Light
+        .title
+            margin-bottom: 26px
+            font-size: 24px
+            color: #FD5412
+            letter-spacing: 1.5px
+        .list
+            a
+                &:hover
+                    text-decoration: none
+            margin-bottom: 50px
+            .element
+                font-size: 14px
+                color: #11364D
+                margin-bottom: 5px
+            .article
+                margin-bottom: 20px

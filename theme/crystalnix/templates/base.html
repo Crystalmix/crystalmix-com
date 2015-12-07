@@ -32,7 +32,7 @@
                             {% if active_page == 'services' %}Our services{% endif %}
                             {% if active_page == 'works' %}Our work{% endif %}
                             {% if active_page == 'contacts' %}Contact us{% endif %}
-                            {% if active_page == 'blogs' %}Blog{% endif %}
+                            {% if active_page == 'blog' %}Blog{% endif %}
                         </span>
                         <img src="{{URL.IMG}}/menu_arrow_up.png">
                     </button>
@@ -77,7 +77,7 @@
                                 <a class="dropdown-toggle {% if active_page == 'contacts' %}text-orange{% endif %}" href="/contacts/">Contact us</a>
                             </li>
                             <li class="dropdown">
-                                <a class="dropdown-toggle {% if active_page == 'blogs' %}text-orange{% endif %}" href="/blogs/">Blog</a>
+                                <a class="dropdown-toggle {% if active_page == 'blog' %}text-orange{% endif %}" href="{{ BLOG_URL }}">Blog</a>
                             </li>
                         </ul>
                     </div>
