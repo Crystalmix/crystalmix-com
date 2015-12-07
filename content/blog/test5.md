@@ -1,7 +1,8 @@
-Title: Meet new Serverauditor feature - Snippets 2
-Date: 2015-11-12 18:32
-Tags: serverauditor, hello
+Title: Meet new Serverauditor feature - Snippets 3
+Date: 2015-12-12 18:32
+Tags: asdd
 Author: Anton Karpov
+
 
 Snippets is our new feature that will be available in Serverauditor 2.1.0 and above for iOS. So let’s see what this feature brings into the application.
 

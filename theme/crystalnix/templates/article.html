@@ -2,40 +2,38 @@
 {% set active_page = 'blog' -%}
 {% block content %}
 <div class="content article-content">
-  <div class="article-header text-center">
+    <div class="article-header text-center"
+         style="background-image: url({% if background_image %}{{background_image}}{% else %}{{URL.IMG}}/article/header_article.png{% endif %})">
 
-      <div class="article-title">
-          {{ article.title }}
-      </div>
+        <div class="article-title">
+            {{ article.title }}
+        </div>
 
-      <div class="article-author">
-          By {{ article.author }}, {{ article.date.strftime('%d.%m.%Y') }}
-      </div>
+        <div class="article-author">
+            By {{ article.author }}, {{ article.date.strftime('%d.%m.%Y') }}
+        </div>
 
-      <div class="article-tags">
-          <span class="sharp">#</span>
-          <span class="tag">android</span>
-          <span class="tag">hybrid</span>
-          <span class="tag">applications</span>
-          <span class="tag">ios mobile</span>
-          <span class="tag">development</span>
-          <span class="tag">xamarin</span>
-      </div>
+        <div class="article-tags">
+            <span class="sharp">#</span>
+            {% for tag in article.tags %}
+                <span class="tag">{{ tag.name }}</span>
+            {% endfor %}
+        </div>
 
-  </div>
+    </div>
 
-  <div class="article-text">
-      <div class="container">
+    <div class="article-text">
+        <div class="container">
             <div class="row">
                 <div class="col-lg-offset-1 col-lg-10">
                     {{ article.content }}
                 </div>
             </div>
-      </div>
-  </div>
+        </div>
+    </div>
 
-  <div class="share-content">
-      <div class="container">
+    <div class="share-content">
+        <div class="container">
             <div class="row">
                 <div class="col-lg-offset-1 col-lg-10">
                     <div class="share-title  text-center">
@@ -52,29 +50,132 @@
                     </div>
                 </div>
             </div>
-      </div>
-  </div>
+        </div>
+    </div>
 
-  <div class="blog-navigation text-center">
-      {% if article.prev_article and article.prev_article.title != 'index'%}
-        <a href="/{{ article.prev_article.url}}">{{ article.prev_article.title }}</a></p>
-      {% endif %}
+    <div class="blog-navigation text-center">
 
-      {% if article.next_article and article.next_article.title != 'index'%}
-      <p class="nextpost">Newer <i class="fa fa-arrow-right"></i><br />
-      <a href="/{{ article.next_article.url}}">{{ article.next_article.title }}</a></p>
-      {% endif %}
+        <div id="left-arrow">
+            {% if article.prev_article %}
+                <a href="/{{ article.prev_article.url}}">
+                    <img src="/theme/img/article/left_arrow.png">
+                </a>
+            {% endif %}
+        </div>
 
-  </div>
+        <div id="list-articles">
+            <a href="{{ BLOG_URL }}">
+                <img src="/theme/img/article/list_articles.png">
+            </a>
+        </div>
 
-  {% if article.prev_article and article.prev_article.title != 'index'%}
-      <p class="prevpost"><i class="fa fa-arrow-left"></i> Older<br />
-      <a href="/{{ article.prev_article.url}}">{{ article.prev_article.title }}</a></p>
-  {% endif %}
-  {% if article.next_article and article.next_article.title != 'index'%}
-      <p class="nextpost">Newer <i class="fa fa-arrow-right"></i><br />
-      <a href="/{{ article.next_article.url}}">{{ article.next_article.title }}</a></p>
-  {% endif %}
+        <div id="right-arrow">
+            {% if article.next_article %}
+                <a href="/{{ article.next_article.url}}">
+                    <img src="/theme/img/article/right_arrow.png">
+                </a>
+            {% endif %}
+        </div>
+
+    </div>
+
+    <div class="related-articles">
+
+        <div class="related-articles-header text-center">
+            You might also like
+        </div>
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-lg-offset-1 col-lg-10 related-articles-list row">
+
+                    {% for a in article.related_posts %}
+
+                        <div class="col-sm-3 col-xs-12 related-article">
+
+                            <div class="related-article-title">
+                                {{ a.title }}
+                            </div>
+
+                            <div class="related-article-author">
+                                 By {{ a.author }}, {{ a.date.strftime('%d.%m.%Y') }}
+                            </div>
+
+                            <button class="read-more-btn btn">READ MORE</button>
+
+                        </div>
+
+                    {% endfor %}
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="popular">
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-lg-offset-1 col-lg-10 row">
+
+                    <div class="col-sm-4 col-xs-12 popular-tags">
+
+                        <div class="title">
+                            Popular tags
+                        </div>
+
+                        <div class="list">
+                            {% for tag in tags|map(attribute=0)|sort(attribute='articles_counter', reverse=true) %}
+                                <div class="element">{{tag.name}} ({{tag.articles_counter}})</div>
+                            {% endfor %}
+                        </div>
+
+                    </div>
+
+                    <div class="col-sm-4 col-xs-12 popular-authors">
+
+                        <div class="title">
+                            Popular authors
+                        </div>
+
+                        <div class="list">
+                            <div class="element">Dmitry Lyfar (21)</div>
+                            <div class="element">Anton Kuznetsov (19)</div>
+                            <div class="element">Roman Kudiyarov (14)</div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-sm-4 col-xs-12 last-articles">
+
+                        <div class="title">
+                            Trending posts
+                        </div>
+
+                        <div class="list">
+                            {% for a in articles[:3] %}
+                            <a href="/{{ a.url }}">
+                                <div class="element article">{{ a.title }}</div>
+                            </a>
+                            {% endfor %}
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
 
 </div>
 

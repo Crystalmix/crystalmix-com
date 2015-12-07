@@ -80,6 +80,15 @@ TEMPLATE_PAGES = {
 LOAD_CONTENT_CACHE = False
 
 PLUGIN_PATHS = ['./pelican-plugins']
-PLUGINS = ['neighbors', 'articles_counter']
+PLUGINS = ['neighbors', 'articles_counter', 'related_posts_by_tags']
 
 SIMPLE_FORM_TOKEN = "0c0c9b03a05373c1dd541ebfae44dcbb"
+
+
+URL = {
+    "CDN": "https://cdn.jsdelivr.net",
+    "IMG": "/theme/img",
+    "CSS": "/theme/css",
+    "JS": "/theme/js",
+    "FONTS": "/theme/fonts"
+}
