@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% set active_page = 'works' -%}
+{% block content %}
+
+    <div class="content works">
+
+        <div class="page-logo">
+            <div class="container">
+                <div class="page-logo__content row">
+                    <span class="page-logo__content__header">
+                        Our work
+                    </span>
+                    <span class="page-logo__content__text">
+                        Crystalnix works across multiple platforms, designing and building apps with outstanding ux and ui to meet all of your business needs.
+                    </span>
+                </div>
+                <div class="page-logo__down-content row">
+                    <div class="page-logo__down-content__img">
+                        <a href="#">
+                            <img src="{{URL.IMG}}/down_arrow.png">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+{% endblock %}
+
+{% block scripts %}
+    {{ super() }}
+    <script src="{{URL.CDN}}/jquery.slick/1.5.9/slick.min.js"></script>
+    <script src="{{URL.JS}}/page.works.js"></script>
+{% endblock %}

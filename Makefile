@@ -62,7 +62,6 @@ help:
 html:
 	gulp sass
 	gulp coffee
-	gulp main-bower-files
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
 
 clean:

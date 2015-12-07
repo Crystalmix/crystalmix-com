@@ -2,7 +2,7 @@
 {% set active_page = 'services' -%}
 {% block head %}
     {{ super()}}
-    <link rel="stylesheet" href="/theme/css/slick.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{URL.CDN}}/jquery.slick/1.5.9/slick.css" rel="stylesheet">
 {% endblock head %}
 
 {% block content %}
@@ -21,7 +21,7 @@
                 <div class="page-logo__down-content row">
                     <div class="page-logo__down-content__img">
                         <a href="#product">
-                            <img src="/theme/img/down_arrow.png">
+                            <img src="{{URL.IMG}}/down_arrow.png">
                         </a>
                     </div>
                 </div>
@@ -44,7 +44,7 @@
                 <div class="row product__content text-left">
                     <div class="col-sm-12 product__content__wrapper">
                         <div class="col-sm-6 product__content__block">
-                            <img src="/theme/img/our_services/product/requirements.png">
+                            <img src="{{URL.IMG}}/our_services/product/requirements.png">
                             <span class="product__content__block__title">
                                 Requirements
                             </span>
@@ -54,7 +54,7 @@
                             </span>
                         </div>
                         <div class="col-sm-6 product__content__block">
-                            <img src="/theme/img/our_services/product/quotes.png">
+                            <img src="{{URL.IMG}}/our_services/product/quotes.png">
                             <span class="product__content__block__title">
                                 Quotes
                             </span>
@@ -65,7 +65,7 @@
                         </div>
                     </div>
                     <div class="col-sm-6 product__content__block">
-                        <img src="/theme/img/our_services/product/wireframes.png">
+                        <img src="{{URL.IMG}}/our_services/product/wireframes.png">
                         <span class="product__content__block__title">
                             Wireframes
                         </span>
@@ -75,7 +75,7 @@
                         </span>
                     </div>
                     <div class="col-sm-6 product__content__block">
-                        <img src="/theme/img/our_services/product/statement.png">
+                        <img src="{{URL.IMG}}/our_services/product/statement.png">
                         <span class="product__content__block__title">
                             Statement of Work
                         </span>
@@ -131,7 +131,7 @@
                         </div>
                         <div class="slide slide-0">
                             <div class="slide-image"></div>
-                            <span class="slide-text">
+                            <span class="hidden-xs hidden-sm slide-text">
                                 Hybrid apps
                             </span>
                         </div>
@@ -164,7 +164,7 @@
                         <span class="hidden-lg hidden-md slide-name">
 
                         </span>
-                        <img class="" src="/theme/img/our_services/bespoke/mobile_arrow.png">
+                        <img class="" src="{{URL.IMG}}/our_services/bespoke/mobile_arrow.png">
                         <div class="bespoke__slider__content text-left">
                             <div id="hybrid">
                                 <span class="block-text">
@@ -322,7 +322,7 @@
                         </div>
                         <div class="slide slide-0">
                             <div class="slide-image"></div>
-                            <span class="slide-text">
+                            <span class="hidden-xs hidden-sm slide-text">
                                 AWS based solutions
                             </span>
                         </div>
@@ -343,7 +343,7 @@
                         <span class="hidden-lg hidden-md slide-name">
 
                         </span>
-                        <img class="" src="/theme/img/our_services/bespoke/cloud_arrow.png">
+                        <img class="" src="{{URL.IMG}}/our_services/bespoke/cloud_arrow.png">
                         <div class="bespoke__slider__content text-left">
                             <div id="solutions">
                                 <span class="block-text">
@@ -479,7 +479,7 @@
                 </span>
                 <div class="row post__content text-left">
                     <div class="col-sm-6 post__content__block">
-                        <img src="/theme/img/our_services/post/what_next.png">
+                        <img src="{{URL.IMG}}/our_services/post/what_next.png">
                         <span class="post__content__block__title">
                             What next?
                         </span>
@@ -489,7 +489,7 @@
                         </span>
                     </div>
                     <div class="col-sm-6 post__content__block">
-                        <img src="/theme/img/our_services/post/updates.png">
+                        <img src="{{URL.IMG}}/our_services/post/updates.png">
                         <span class="post__content__block__title">
                             Updates & support
                         </span>
@@ -507,6 +507,6 @@
 
 {% block scripts %}
     {{ super() }}
-    <script src="/theme/js/slick.min.js"></script>
-    <script src="/theme/js/our_services_sliders.js"></script>
+    <script src="{{URL.CDN}}/jquery.slick/1.5.9/slick.min.js"></script>
+    <script src="{{URL.JS}}/page.services.js"></script>
 {% endblock %}

@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+{% set active_page = 'blog' -%}
+{% block content %}
+
+    <div class="content blogs">
+
+        <div class="page-logo">
+            <div class="container">
+                <div class="page-logo__content row">
+                    <span class="page-logo__content__header">
+                        Our blog
+                    </span>
+                    <span class="page-logo__content__text">
+                        We like to keep up to date with what’s going on in the world of IT and technology and we also
+                        love to share our thoughts with you! Read on to see what we think of the latest tech.
+                    </span>
+                </div>
+                <div class="page-logo__down-content row">
+                    <div class="page-logo__down-content__img">
+                        <a href="#">
+                            <img src="{{URL.IMG}}/our_blog/blog_arrow.png">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="list-articles">
+            <div class="article">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-offset-1 col-lg-10">
+
+                            <div class="title">
+                                Hybrid mobile apps. What are the advantages of xamarin?
+                            </div>
+
+                            <div class="author">
+                                By Anton Kuznetsov, 13.08.2015
+                            </div>
+
+                            <div class="summary">
+                                Recently, one of our customers decided to develop a cross-platform VoIP application using Xamarin. We were keen to try this hybrid technology and share our experience after our first research was conducted. The idea was pretty common for this kind of app - voice and video calls and text messaging for corporate users. But it was a great chance for our company to see how much Xamarin could actually reduce the time of the development. It was also very exciting for me as an experienced iOS developer to expand my skills and to see the advantages and disadvantages of using this ..
+                            </div>
+
+                            <div class="tags">
+                                <span class="sharp">#</span>
+                                <span class="tag">android</span>
+                                <span class="tag">hybrid</span>
+                                <span class="tag">applications</span>
+                                <span class="tag">ios mobile</span>
+                                <span class="tag">development</span>
+                                <span class="tag">xamarin</span>
+                            </div>
+
+                            <button class="btn read-more-btn">READ MORE</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button class="btn btn-danger btn-lg" style="margin: auto; display: block;">PAGINATION</button>
+    </div>
+
+{% endblock %}
+
+{% block scripts %}
+    {{ super() }}
+    <script src="{{URL.CDN}}/jquery.slick/1.5.9/slick.min.js"></script>
+    <script src="{{URL.JS}}/page.navigation.js"></script>
+    <script src="{{URL.JS}}/page.blogs.js"></script>
+{% endblock %}

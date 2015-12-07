@@ -45,9 +45,9 @@ BLOG_URL = "/blog/"
 ARTICLE_URL = 'blog/{slug}.html'
 ARTICLE_SAVE_AS = 'blog/{slug}.html'
 
-PROJECTS_URL = "/projects/"
-PAGE_URL = 'projects/{slug}.html'
-PAGE_SAVE_AS = 'projects/{slug}.html'
+WORKS_URL = "/works/"
+PAGE_URL = 'works/{slug}.html'
+PAGE_SAVE_AS = 'works/{slug}.html'
 
 TAGS_SAVE_AS = ''
 TAG_URL = ''
@@ -63,17 +63,12 @@ AUTHOR_SAVE_AS = ''
 
 ARCHIVES_SAVE_AS = ''
 
-SERVICES_SAVE_AS = "services.html"
-SERVICES_URL = "/" + SERVICES_SAVE_AS
-CONTACTS_SAVE_AS = "contacts.html"
-CONTACTS_URL = "/" + CONTACTS_SAVE_AS
-
 TEMPLATE_PAGES = {
-    "services.html": SERVICES_SAVE_AS,
-    "contacts.html": CONTACTS_SAVE_AS,
-    "projects_index.html": "projects/index.html",
-    "projects.template": "projects/projects.json",
-    "blog_index.html": "blog/index.html",
+    "services.html": "services/index.html",
+    "contacts.html": "contacts/index.html",
+    "works.html": "works/index.html",
+    "works.template": "works/works.json",
+    "blog.html": "blog/index.html",
     "blog.template": "blog/blog.json"
 }
 
@@ -83,7 +78,6 @@ PLUGIN_PATHS = ['./pelican-plugins']
 PLUGINS = ['neighbors', 'articles_counter', 'related_posts_by_tags']
 
 SIMPLE_FORM_TOKEN = "0c0c9b03a05373c1dd541ebfae44dcbb"
-
 
 URL = {
     "CDN": "https://cdn.jsdelivr.net",
